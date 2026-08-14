@@ -1,0 +1,14 @@
+Components: Contains reusable UI components used across the application.
+Layouts: The layouts folder is an optional project convention used to store shared layout 
+    components such as headers, footers, and sidebars.
+Lib: The lib folder contains shared utility functions and helper modules used across the application.
+Services: The services folder contains modules that handle communication with external services 
+    like APIs, databases, and authentication.
+Utils: This folder contains shared utility functions for common tasks across the application.
+Assets: The assets folder stores static files like images, fonts, and icons used in the UI.
+Hooks: The hooks folder contains custom React hooks that encapsulate reusable logic across the application.
+
+
+
+questions:
+-how does react change dom/whole virtual dom thing without rerender

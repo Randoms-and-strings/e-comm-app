@@ -1,0 +1,80 @@
+:root {
+  --background: #edeff0;
+  --foreground: #171717;
+  width: 100%;
+}
+
+.body {
+  width: 100%;
+  background: var(--background);
+  color: var(--foreground);
+  margin: 0px;
+  
+}
+
+.nav {
+  /* clip-path: shape(from 0 0,vline to calc(100% - 25px),curve to 21.43% calc(100% - 15.5px) with 14.29% calc(100% - 15px),smooth to 35.71% calc(100% - 9px),smooth to 50% calc(100% - 20px),smooth to 64.29% calc(100% - 44px),smooth to 78.57% calc(100% - 27.5px),smooth to 100% calc(100% - 25px),vline to 0, hline to 0); */
+  background-color: #1ecbe1; 
+  width: 100%;
+  height: 4rem;
+   /* mask: 
+    radial-gradient(111.8px at 50% calc(100% - 150px),#000 99%,#0000 101%) calc(50% - 100px) 0/200px 100%,
+    radial-gradient(111.8px at 50% calc(100% + 100px),#0000 99%,#000 101%) 50% calc(100% - 50px)/200px 100% repeat-x; */
+  
+  margin-top: 0rem;
+  padding-inline-start: 0px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  /* max-width: 100%; */
+  list-style-type: none;
+}
+
+.navElements {
+ 
+  flex: 1 1 auto;
+  position: relative;
+  text-align: center;
+
+}
+
+.navAnchorTags{
+  color: #edeff0;
+  text-decoration: none;
+  font-size: 1rem;
+  z-index: 1;
+}
+.navAnchorTags:hover{
+  color: black;
+}
+.navAnchorTagsClicked{
+  color: black;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  margin-left: calc(50% - 1.5rem);
+  font-style: italic;
+  border-radius: 50%;
+  background-color:#edeff0;
+  z-index: 0;
+}
+
+
+.footer {
+  /* clip-path: shape(from 0 100%,vline to 25px,curve to 30% 15.5px with 20% 15px,smooth to 50% 9px,smooth to 70% 20px,smooth to 100% 25px,vline to 100%, hline to 0); */
+  /* mask: 
+    radial-gradient(111.8px at 50% 150px,#000 99%,#0000 101%) calc(50% - 100px) 0/200px 100%,
+    radial-gradient(111.8px at 50% -100px,#0000 99%,#000 101%) 50% 50px/200px 100% repeat-x; */
+  background-color: #1ecbe1;
+   width: 100%;
+  height: 4rem;
+}
+
+.searchButton {
+  background-color: none;
+}

@@ -1,0 +1,14 @@
+#item-count{
+    width: 1.3rem;
+    height: 1.3rem;
+    background-color: #e1341e;
+    border-radius: 50%;
+    color: #edeff0;
+    font-size: .9rem;
+    font-weight: 600;
+    text-align: center;
+    position: absolute;
+    top: -.35rem;
+    right: calc(50% - 1.25em);
+    margin: 0;
+}
