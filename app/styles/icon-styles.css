@@ -4,6 +4,10 @@
     position: relative;
 }
 
-.search-button {
-    
+.magnifying-glass {
+    font-size: .8rem;
+    color: gray;
+}
+.magnifying-glass-clicked{
+    color: black;
 }

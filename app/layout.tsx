@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import globalstyle from "./globals.module.css";
 import "./styles/icon-styles.css";
-import Link from 'next/link';
+import { v7 as uuidv7 } from 'uuid';
 import NavLink from "./layouts/navLink";
+import SearchBar from "./layouts/searchBar";
 import { Lato } from 'next/font/google'
 import Head from "next/head";
 import { config } from '@fortawesome/fontawesome-svg-core';
@@ -31,6 +32,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
+  const allNavHeaders:string[] = ["Home","Profile","Messages", "logout", "Search", "Cart"];
+
   return (
     <html lang="en"> 
       <Head>
@@ -40,47 +43,63 @@ export default function RootLayout({
       <body className={`${globalstyle.body} ${lato.className}`}>    
         <nav >
           <ul className={globalstyle.nav}>
+
+            
+            {allNavHeaders.map((each:string)=> {
+              const lowercaseValue = each.toLowerCase();
+              if(lowercaseValue === "search"){
+                return (
+                  <SearchBar key={uuidv7()} fontAwesome={<FontAwesomeIcon icon='magnifying-glass' className="magnifying-glass" />}/>
+                );
+              }else if(lowercaseValue === "cart"){
+                return (
+                <NavLink key={uuidv7()} id={lowercaseValue} classlist={`${globalstyle.navAnchorTags}`} destination={`/${lowercaseValue}`}>
+                    <FontAwesomeIcon icon='cart-shopping' />
+                    <CartCount /> 
+                </NavLink>);
+              }
+              
+              return (
+                  <NavLink key={uuidv7()} id={lowercaseValue} classlist={`${globalstyle.navAnchorTags}`} 
+                  destination={lowercaseValue==="home"?"/": `/${lowercaseValue}`} 
+                  innerText={each}/>
+              );
+            })}
           
-            <li className={`${globalstyle.navElements}`}>
-              <div>
+            {/* <li className={`${globalstyle.navElements}`}>
                 <NavLink id="home" classlist={`${globalstyle.navAnchorTags}`} destination="/" innerText="Home"/>
-              </div>
+              
               
             </li>
             <li className={globalstyle.navElements}>
-              <div>
-                <NavLink id="profile" classlist={`${globalstyle.navAnchorTags}`} destination="./profile" innerText="Profile"/>
-              </div>
+              
+                <NavLink id="profile" classlist={`${globalstyle.navAnchorTags}`} destination="/profile" innerText="Profile"/>
+              
               
             </li>
-            <li className={globalstyle.navElements}>
-              <div>
-                 <NavLink id="logout" classlist={`${globalstyle.navAnchorTags}`} destination="./logout" innerText="Logout"/>
-              </div>
-             
+            <li className={globalstyle.navElements}>          
+                 <NavLink id="logout" classlist={`${globalstyle.navAnchorTags}`} destination="/logout" innerText="Logout"/>
             </li>
             <li className={globalstyle.navElements}>
-              <form action="./search" method="get">
-                <input type="text" placeholder="Search" />
-                <FontAwesomeIcon icon='magnifying-glass' type="submit" className="search-button" />
-                {/* <button type="submit" className={globalstyle.searchButton}>
-                  
-                </button> */}
+              <form action="/search" method="get" >
+              <div className={globalstyle.searchButtonParentDiv}>
+                <input type="text" placeholder="Search" name="searchProducts" className={globalstyle.searchButtonInput}/>
+                
+                <button type="submit" className={globalstyle.searchButton}>
+                  <FontAwesomeIcon icon='magnifying-glass' className="magnifying-glass" />
+                </button>
+              </div>
+                
               </form>
             </li>
+
             <li className={globalstyle.navElements}>
-              {/* <NavLink classlist={`${globalstyle.navAnchorTags}`} destination="./cart" innerText="Cart">
-                
-              </NavLink> */}
-              <div className="cart">
-                <FontAwesomeIcon icon='cart-shopping' />
-                <CartCount />
-              </div>
-              
-              
-              
-              
-            </li>
+                <NavLink id="logout" classlist={`${globalstyle.navAnchorTags}`} destination="/cart">
+                    <FontAwesomeIcon icon='cart-shopping' />
+                    <CartCount /> 
+                </NavLink>
+            </li> */}
+
           </ul>
         </nav>
         <header></header>

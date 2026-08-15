@@ -7,34 +7,29 @@ import { JSX } from "react/jsx-runtime";
 
 type navProp = {
     id:string,
-    innerText: string,
+    innerText?: string,
     classlist: string,
     destination:string,
-    children?:JSX.Element
+    children?:JSX.Element[]
 }
 
 export default function NavLink(props:navProp) {
     const pathname = usePathname();
     let classes:string = props.classlist;
-    if(pathname === props.destination){
-        // console.log("here");
-        useEffect(()=>{
-            
-            
-            let div = document.getElementById(props.id)?.parentElement;
-            console.log(div);
-            div?.classList.add(`${globalstyle.navAnchorTagsClicked}`);
-        }, []);
+
         
-        // classes += ` ${globalstyle.navAnchorTagsClicked}`;
-    }
-    // let classes:string = [...props.classlist, pathname === props.destination?`${globalstyle.navAnchorTagsClicked}`:""].join(" ");
-    // console.log(classes);
     return (
+        <li className={globalstyle.navElements}>
+            <div className={pathname === props.destination?globalstyle.navAnchorTagsClicked:""}>
             <Link className={classes} 
             id={props.id}
-            href={props.destination}>
-            {props.innerText}
+            href={props.destination}
+            style={pathname===props.destination?{color:"black"}:{color:"#edeff0"}}>
+            {props.innerText?props.innerText:props.children}
             </Link>
+            </div>
+        </li>
+        
+            
     );
 }
