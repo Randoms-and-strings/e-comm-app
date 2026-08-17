@@ -4,17 +4,19 @@ import "./styles/icon-styles.css";
 import { v7 as uuidv7 } from 'uuid';
 import NavLink from "./layouts/navLink";
 import SearchBar from "./layouts/searchBar";
+import HamburgerBtn from "./layouts/hamburgerBtn";
 import { Lato } from 'next/font/google'
 import Head from "next/head";
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCartShopping, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping, faMagnifyingGlass, faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import CartCount from "./components/cartcount";
 
+
 config.autoAddCss = false;
-let lib = library.add(faCartShopping, faMagnifyingGlass);
+let lib = library.add(faCartShopping, faMagnifyingGlass, faBars);
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -32,24 +34,31 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const allNavHeaders:string[] = ["Home","Profile","Messages", "logout", "Search", "Cart"];
-
+  const allNavHeaders:string[] = ["Search", "Cart"];
+  // const ulRef = useRef(null);
   return (
     <html lang="en"> 
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="icon"
           href="/assets/cart-shopping-solid-full"/>
       </Head>
       <body className={`${globalstyle.body} ${lato.className}`}>    
         <nav >
-          <ul className={globalstyle.nav}>
 
+          
+          
+          
+          <ul className={globalstyle.globalNav}>
+
+            <HamburgerBtn fontAwesomeHamburger={<FontAwesomeIcon icon='bars' />}/>
             
+
             {allNavHeaders.map((each:string)=> {
               const lowercaseValue = each.toLowerCase();
               if(lowercaseValue === "search"){
                 return (
-                  <SearchBar key={uuidv7()} fontAwesome={<FontAwesomeIcon icon='magnifying-glass' className="magnifying-glass" />}/>
+                  <SearchBar key={uuidv7()} fontAwesome={<FontAwesomeIcon icon='magnifying-glass' className={`magnifying-glass`} />}/>
                 );
               }else if(lowercaseValue === "cart"){
                 return (
@@ -59,51 +68,12 @@ export default function RootLayout({
                 </NavLink>);
               }
               
-              return (
-                  <NavLink key={uuidv7()} id={lowercaseValue} classlist={`${globalstyle.navAnchorTags}`} 
-                  destination={lowercaseValue==="home"?"/": `/${lowercaseValue}`} 
-                  innerText={each}/>
-              );
             })}
-          
-            {/* <li className={`${globalstyle.navElements}`}>
-                <NavLink id="home" classlist={`${globalstyle.navAnchorTags}`} destination="/" innerText="Home"/>
-              
-              
-            </li>
-            <li className={globalstyle.navElements}>
-              
-                <NavLink id="profile" classlist={`${globalstyle.navAnchorTags}`} destination="/profile" innerText="Profile"/>
-              
-              
-            </li>
-            <li className={globalstyle.navElements}>          
-                 <NavLink id="logout" classlist={`${globalstyle.navAnchorTags}`} destination="/logout" innerText="Logout"/>
-            </li>
-            <li className={globalstyle.navElements}>
-              <form action="/search" method="get" >
-              <div className={globalstyle.searchButtonParentDiv}>
-                <input type="text" placeholder="Search" name="searchProducts" className={globalstyle.searchButtonInput}/>
-                
-                <button type="submit" className={globalstyle.searchButton}>
-                  <FontAwesomeIcon icon='magnifying-glass' className="magnifying-glass" />
-                </button>
-              </div>
-                
-              </form>
-            </li>
-
-            <li className={globalstyle.navElements}>
-                <NavLink id="logout" classlist={`${globalstyle.navAnchorTags}`} destination="/cart">
-                    <FontAwesomeIcon icon='cart-shopping' />
-                    <CartCount /> 
-                </NavLink>
-            </li> */}
-
           </ul>
         </nav>
+
         <header></header>
-        <main>
+        <main className={globalstyle.main}>
           {children}
         </main>
         <footer className={globalstyle.footer}></footer>

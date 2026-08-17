@@ -1,6 +1,6 @@
 "use client"
 import React from "react";
-import { NoOfProductsInCart } from "../hooks/cartCountHook";
+import { NoOfProductsInCart } from "../hooks/clientHooks/cartCountHook";
 import "../styles/component-styles.css";
 import { usePathname } from "next/navigation";
 

@@ -19,7 +19,7 @@ export default function NavLink(props:navProp) {
 
         
     return (
-        <li className={globalstyle.navElements}>
+        <li className={`${globalstyle.cart} ${globalstyle.navListElements}`}>
             <div className={pathname === props.destination?globalstyle.navAnchorTagsClicked:""}>
             <Link className={classes} 
             id={props.id}
