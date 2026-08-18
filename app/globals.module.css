@@ -93,7 +93,7 @@
 .searchButtonParentDiv {
   position: relative;
   width: 70%;
-  height: auto;
+  height: 1.5rem;
   display: flex;
   flex-direction: row;
   /* justify-content: center; */
@@ -120,7 +120,7 @@
 }
 .searchButton {
   position: absolute;
-  bottom: 0.06rem;
+  bottom: 20%;
   right: calc(.5rem);
   
   cursor: pointer;
@@ -135,22 +135,33 @@
   }
   .navListElements {
  
-  flex: 0 0 auto;
+  flex: 1 1 auto;
   position: relative;
   text-align: center;
+  /* width: 100%; */
+}
+.navListElementsMenu{
+  width: 100%;
+  /* edit below */
+  
+ 
+  
 }
 
 .navAnchorTagsClicked{
-   
+   width: auto;
+   height: auto;
+   border-radius: 0;
+   margin-left: 0;
 }
-.navAnchorTagMenu{
-
-}
+/* .navListElements{
+  width: 100%;
+} */
   
  .menuNavParent{
     /* display: none; */
     position: absolute;
-    top: calc(2.5rem - 10px);
+    top: calc(2rem - 10px);
     left: 0;
     width: 80%;
     height: 90vh;
@@ -161,14 +172,22 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  gap: 1rem;
   background-color: #16a2b4;
-  
+  margin-top: 2.3rem;
+  /* width: 100%; */
  }
  .hamburger{
   position: relative;
   display: inline;
   z-index: 5;
   margin-left: 0.5rem;
+
+ }
+ .hamburger>button{
+  padding: .3rem;
+  border-radius: 20%;
+  cursor: pointer;
  }
  .globalNav {
   background-color: #1ecbe1; 
@@ -186,9 +205,15 @@
   list-style-type: none;
 }
 .cart{
-  margin-right: 10%;
+  /* for some reason it stops desk menunav showing at 7%+ or so */
+  margin-right: 1%;
+  
+  /* text-align: center; */
+
 }
  .searchBarContainer {
-  display: none;
+  margin-left: -25%;
+  min-width: 50%;
+  
  }
 }

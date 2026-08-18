@@ -51,14 +51,14 @@ export default function RootLayout({
           
           <ul className={globalstyle.globalNav}>
 
-            <HamburgerBtn fontAwesomeHamburger={<FontAwesomeIcon icon='bars' />}/>
+            <HamburgerBtn fontAwesomeHamburger={<FontAwesomeIcon icon='bars' className="hamburger-icon" />}/>
             
 
             {allNavHeaders.map((each:string)=> {
               const lowercaseValue = each.toLowerCase();
               if(lowercaseValue === "search"){
                 return (
-                  <SearchBar key={uuidv7()} fontAwesome={<FontAwesomeIcon icon='magnifying-glass' className={`magnifying-glass`} />}/>
+                  <SearchBar key={uuidv7()} fontAwesome={<FontAwesomeIcon icon='magnifying-glass' className='magnifying-glass' />}/>
                 );
               }else if(lowercaseValue === "cart"){
                 return (
