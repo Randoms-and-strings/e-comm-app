@@ -44,7 +44,7 @@ export default function RootLayout({
           href="/assets/cart-shopping-solid-full"/>
       </Head>
       <body className={`${globalstyle.body} ${lato.className}`}>    
-        <nav >
+        <nav style={{position:"sticky", top:"0px"}}>
 
           
           
@@ -53,7 +53,7 @@ export default function RootLayout({
 
             <HamburgerBtn fontAwesomeHamburger={<FontAwesomeIcon icon='bars' className="hamburger-icon" />}/>
             
-
+            
             {allNavHeaders.map((each:string)=> {
               const lowercaseValue = each.toLowerCase();
               if(lowercaseValue === "search"){

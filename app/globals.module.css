@@ -17,10 +17,6 @@
   background-color: #1ecbe1; 
   width: 100%;
   height: 5rem;
-   /* mask: 
-    radial-gradient(111.8px at 50% calc(100% - 150px),#000 99%,#0000 101%) calc(50% - 100px) 0/200px 100%,
-    radial-gradient(111.8px at 50% calc(100% + 100px),#0000 99%,#000 101%) 50% calc(100% - 50px)/200px 100% repeat-x; */
-  
   margin-top: 0rem;
   padding-inline-start: 0px;
   position: relative;
@@ -44,13 +40,19 @@
 .navListElementsMenu{
   flex-basis: 66.6%;
 }
+
 .navListElements {
  
   flex: 1 1 auto;
   position: relative;
   text-align: center;
 }
-
+.searchBarContainer{
+  width: 16.6%;
+}
+.cart{
+  width: 16.6%;
+}
 .navAnchorTags{
   color: #edeff0;
   text-decoration: none;
@@ -81,10 +83,6 @@
 
 
 .footer {
-  /* clip-path: shape(from 0 100%,vline to 25px,curve to 30% 15.5px with 20% 15px,smooth to 50% 9px,smooth to 70% 20px,smooth to 100% 25px,vline to 100%, hline to 0); */
-  /* mask: 
-    radial-gradient(111.8px at 50% 150px,#000 99%,#0000 101%) calc(50% - 100px) 0/200px 100%,
-    radial-gradient(111.8px at 50% -100px,#0000 99%,#000 101%) 50% 50px/200px 100% repeat-x; */
   background-color: #1ecbe1;
    width: 100%;
   height: 4rem;
@@ -92,14 +90,14 @@
 
 .searchButtonParentDiv {
   position: relative;
-  width: 70%;
+  width: 75%;
   height: 1.5rem;
   display: flex;
   flex-direction: row;
   /* justify-content: center; */
   z-index: 0;
 
-  margin-left: calc(15%);
+  margin-left: 12.5%;
 
 }
 .searchButtonInput {
@@ -130,18 +128,19 @@
 }
 
 @media (max-width:800px) {
-  .navListElementsMenu{
-    flex-basis: 33.3%;
-  }
+  /* .navListElementsMenu{
+    
+  } */
   .navListElements {
  
   flex: 1 1 auto;
   position: relative;
-  text-align: center;
-  /* width: 100%; */
+   /* does it center within the flex?*/
+  width: 100%;
 }
 .navListElementsMenu{
   width: 100%;
+  flex-basis: 33.3%;
   /* edit below */
   
  
@@ -199,21 +198,26 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   /* max-width: 100%; */
   list-style-type: none;
 }
 .cart{
   /* for some reason it stops desk menunav showing at 7%+ or so */
-  margin-right: 1%;
+  margin-right: 1rem;
   
   /* text-align: center; */
 
 }
+.cart>div{
+  text-align: right;
+}
+.searchButtonParentDiv{
+  margin-left: 0;
+}
  .searchBarContainer {
-  margin-left: -25%;
-  min-width: 50%;
-  
+
+  z-index: 0;
  }
 }
