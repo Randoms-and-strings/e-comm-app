@@ -49,6 +49,7 @@
 }
 .searchBarContainer{
   width: 16.6%;
+  
 }
 .cart{
   width: 16.6%;
@@ -79,6 +80,21 @@
   border-radius: 50%;
   background-color:#edeff0;
  
+}
+.navAnchorTagsClickedCart{
+  color: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
+  padding: .3rem;
+  margin-left: calc(50% - 1.5rem);
+  font-style: italic;
+  border-radius: 50%;
+  background-color:#edeff0;
 }
 
 
@@ -153,9 +169,21 @@
    border-radius: 0;
    margin-left: 0;
 }
-/* .navListElements{
-  width: 100%;
-} */
+.navAnchorTagsClickedCart{
+  color: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
+  padding: .3rem;
+  margin-left: calc(50% - 1.5rem);
+  font-style: italic;
+  border-radius: 50%;
+  background-color:#edeff0;
+}
   
  .menuNavParent{
     /* display: none; */
@@ -205,19 +233,18 @@
 }
 .cart{
   /* for some reason it stops desk menunav showing at 7%+ or so */
-  margin-right: 1rem;
+  width: 33.33%;
+  z-index: 0;
   
-  /* text-align: center; */
 
 }
-.cart>div{
-  text-align: right;
-}
+
 .searchButtonParentDiv{
   margin-left: 0;
 }
  .searchBarContainer {
-
+  width: 33.33%;
   z-index: 0;
+  margin-left: 9%;
  }
 }

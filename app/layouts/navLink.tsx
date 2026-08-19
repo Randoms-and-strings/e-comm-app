@@ -16,11 +16,11 @@ type navProp = {
 export default function NavLink(props:navProp) {
     const pathname = usePathname();
     let classes:string = props.classlist;
-    console.log(props.id);
+    console.log(pathname);
         
     return (
         <li className={`${props.id==="cart"?globalstyle.cart:""} ${globalstyle.navListElements}`}>
-            <div className={pathname === props.destination?globalstyle.navAnchorTagsClicked:""}>
+            <div className={`${ pathname === props.destination && props.id!== "cart"?globalstyle.navAnchorTagsClicked:""} ${ pathname === props.destination && props.id=== "cart"?globalstyle.navAnchorTagsClickedCart:""} `}>
             <Link className={classes} 
             id={props.id}
             href={props.destination}
