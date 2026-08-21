@@ -1,7 +1,7 @@
 "use client";
 import { JSX, useEffect, useState, useRef, RefObject, MouseEvent } from "react";
 import NavLink from "./navLink";
-import { v7 as uuidv7 } from 'uuid';
+import handleUuid from "../hooks/serverHooks/handleKeyUuid";
 import globalstyle from "../globals.module.css";
 import useClientWidth from "../hooks/clientHooks/getClientWindowSize";
 
@@ -40,7 +40,7 @@ export default function HamburgerBtn(props:hamburgerProps){
                 {dropdownNavHeaders.map((items:string)=>{
                     const lowercaseValue = items.toLowerCase();
                     return(
-                      <NavLink key={uuidv7()} id={lowercaseValue} 
+                      <NavLink key={handleUuid()} id={lowercaseValue} 
                       classlist={`${globalstyle.navAnchorTags} `} 
                         destination={lowercaseValue==="home"?"/": `/${lowercaseValue}`} 
                         innerText={items}/> 

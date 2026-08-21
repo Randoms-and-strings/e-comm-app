@@ -1,0 +1,113 @@
+/* ::root{
+    --button-background-color:#e1341e;
+    --button-text-color: white;
+} */
+
+.card{
+    width: 30%;
+    height: 65vh;
+    background-color: white;
+    margin-bottom: 2.5%;
+    border-radius: var(--home-card-border-radius);
+    position: relative;
+}
+
+.cardContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex: 1 1 auto;
+}
+
+.cardImg{
+    width: 100%;
+    height: 100%;
+    border-radius: var(--home-card-border-radius);
+    
+    /* margin-left: 10%; */
+    
+    /* border-radius: 10%; */
+}
+
+.cardTextsContainer{
+    height: auto;
+    width: 100%;
+    /* display: none; */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom-left-radius: var(--home-card-border-radius);
+    border-bottom-right-radius: var(--home-card-border-radius);
+    background-color: black;
+    color: white;
+    opacity: 0.9;
+}
+.cardImg>img{
+    width: 100%;
+    height: 100%;
+    border-radius: var(--home-card-border-radius);
+    object-fit: cover;
+    overflow: hidden;
+    cursor: pointer;
+}
+.cardPrice,.cardQty{
+    margin: .5rem;
+    font-size: .8rem;
+}
+.cardHeading{
+    text-align: center;
+    font-weight: 500;
+    font-size: 1rem;
+    margin: .5rem;
+}
+.cardQtyAndCostContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* gap: 25%; */
+}
+.addToCart{
+    width: 100%;
+    padding: .7rem;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    cursor: pointer;
+    border: 0;
+    /* border-radius: var(--home-card-border-radius); */
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+.addToCart:hover{
+    background-color: #350502;
+    color: white;
+}
+
+@media (max-width:800px) {
+    .card{
+        /* width: 45%;
+        height: 50vh; */
+        display: flex;
+        flex-direction: column;
+        
+        height: 50vh;
+        width: 45%;
+    }
+    .cardImg>img{
+        width: 100%;
+        height: 60%;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        /* object-fit: contain; */
+    }
+    .cardTextsContainer{
+        height: 40%;
+    }
+    .cardQtyAndCostContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    /* .cardHeading,.cardPrice,.cardQty{
+        margin-top: 0;
+    } */
+}

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import globalstyle from "./globals.module.css";
 import "./styles/icon-styles.css";
-import { v7 as uuidv7 } from 'uuid';
+import handleUuid from "./hooks/serverHooks/handleKeyUuid";
 import NavLink from "./layouts/navLink";
 import SearchBar from "./layouts/searchBar";
 import HamburgerBtn from "./layouts/hamburgerBtn";
@@ -58,11 +58,11 @@ export default function RootLayout({
               const lowercaseValue = each.toLowerCase();
               if(lowercaseValue === "search"){
                 return (
-                  <SearchBar key={uuidv7()} fontAwesome={<FontAwesomeIcon icon='magnifying-glass' className='magnifying-glass' />}/>
+                  <SearchBar key={handleUuid()} fontAwesome={<FontAwesomeIcon icon='magnifying-glass' className='magnifying-glass' />}/>
                 );
               }else if(lowercaseValue === "cart"){
                 return (
-                <NavLink key={uuidv7()} id={lowercaseValue} classlist={`${globalstyle.navAnchorTags}`} destination={`/${lowercaseValue}`}>
+                <NavLink key={handleUuid()} id={lowercaseValue} classlist={`${globalstyle.navAnchorTags}`} destination={`/${lowercaseValue}`}>
                     <FontAwesomeIcon icon='cart-shopping' />
                     <CartCount /> 
                 </NavLink>);
@@ -73,8 +73,9 @@ export default function RootLayout({
         </nav>
 
         <header></header>
-        <main className={globalstyle.main}>
+        <main  className={globalstyle.main}>
           {children}
+          
         </main>
         <footer className={globalstyle.footer}></footer>
       </body>

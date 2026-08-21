@@ -1,7 +1,10 @@
 :root {
   --background: #edeff0;
   --foreground: #171717;
-  width: 100%;
+  --button-background-color:#e1341e;
+    --button-text-color: white;
+    --home-card-border-radius: 2rem;
+  /* width: 100%; */
 }
 
 .body {
@@ -27,6 +30,14 @@
   align-items: center;
   /* max-width: 100%; */
   list-style-type: none;
+  margin-bottom: 1.5rem;
+ 
+}
+.main{
+  /* background-color: black; */
+  margin-left: calc(8.32% - 1.5rem); /* size of each element in nav vp - half rem size of clicked div width*/
+  margin-right: calc(8.32% - 1.5rem );
+  
 }
 .menuNav{
   display: flex;
@@ -144,9 +155,7 @@
 }
 
 @media (max-width:800px) {
-  /* .navListElementsMenu{
-    
-  } */
+
   .navListElements {
  
   flex: 1 1 auto;
@@ -158,9 +167,7 @@
   width: 100%;
   flex-basis: 33.3%;
   /* edit below */
-  
- 
-  
+
 }
 
 .navAnchorTagsClicked{
@@ -190,7 +197,7 @@
     position: absolute;
     top: calc(2rem - 10px);
     left: 0;
-    width: 80%;
+    width: 70%;
     height: 90vh;
     background-color: #16a2b4;
     z-index: 1;
@@ -238,6 +245,11 @@
   
 
 }
+/* delete this to make cart go back to center of its own container */
+/* .cart>div{
+  text-align: right;
+  margin-right: 1rem;
+} */
 
 .searchButtonParentDiv{
   margin-left: 0;
