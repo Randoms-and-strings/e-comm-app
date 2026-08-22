@@ -1,5 +1,7 @@
+"use client"
 import homestyles from "./styles/home.module.css"
 import handleUuid from "./hooks/serverHooks/handleKeyUuid";
+import { useRef, useState } from "react";
 
 export default function Home() {
   type homeCardLayout = {
@@ -48,12 +50,20 @@ export default function Home() {
   return (
     <section className={homestyles.cardContainer}>
     {mockResponse.map((item:homeCardLayout)=>{
+      const imageRef = useRef(item.link);
+      const [isImageHovered, changeIsImageHovered] = useState(false);
       return(
         <div key={handleUuid()} className={homestyles.card}>
             <div className={homestyles.cardImg}>
-              <img src={item.link}  />
+              <img  onMouseOver={()=>{
+                if(imageRef.current === item.link){
+                  changeIsImageHovered(true);
+                }
+              }} onMouseOut={()=>{
+                changeIsImageHovered(false);
+              }} src={item.link}  />
             </div>
-            <div  className={homestyles.cardTextsContainer}>
+            <div style={isImageHovered?{display:"none"}:{display:"block"}}  className={homestyles.cardTextsContainer}>
               <h2 className={homestyles.cardHeading}>{item.productName}</h2>
               <div  className={homestyles.cardQtyAndCostContainer}>
                 <p className={homestyles.cardPrice}>Cost: ${item.productCost}</p>

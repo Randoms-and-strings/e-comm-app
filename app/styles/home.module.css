@@ -1,11 +1,7 @@
-/* ::root{
-    --button-background-color:#e1341e;
-    --button-text-color: white;
-} */
-
 .card{
     width: 30%;
     height: 65vh;
+    z-index: 5;
     background-color: white;
     margin-bottom: 2.5%;
     border-radius: var(--home-card-border-radius);
@@ -18,21 +14,20 @@
     flex-wrap: wrap;
     justify-content: space-between;
     flex: 1 1 auto;
+    /* z-index: 0; */
 }
 
 .cardImg{
     width: 100%;
     height: 100%;
     border-radius: var(--home-card-border-radius);
-    
-    /* margin-left: 10%; */
-    
-    /* border-radius: 10%; */
+
 }
 
 .cardTextsContainer{
     height: auto;
     width: 100%;
+    
     /* display: none; */
     position: absolute;
     bottom: 0;
@@ -42,6 +37,7 @@
     background-color: black;
     color: white;
     opacity: 0.9;
+    text-align: center;
 }
 .cardImg>img{
     width: 100%;
@@ -65,10 +61,10 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* gap: 25%; */
+    gap: 1rem;
 }
 .addToCart{
-    width: 100%;
+    width: 90%;
     padding: .7rem;
     background-color: var(--button-background-color);
     color: var(--button-text-color);
@@ -85,29 +81,35 @@
 
 @media (max-width:800px) {
     .card{
-        /* width: 45%;
-        height: 50vh; */
         display: flex;
         flex-direction: column;
         
         height: 50vh;
-        width: 45%;
+        width: 48%;
     }
     .cardImg>img{
         width: 100%;
-        height: 60%;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
+        height: 100%;
+        /* border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0; */
         /* object-fit: contain; */
     }
     .cardTextsContainer{
-        height: 40%;
+        /* height: 35%; */
+        padding: 0;
+        opacity: 1;
     }
     .cardQtyAndCostContainer{
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+        justify-content: center;
+        margin-bottom: .5rem;
     }
-    /* .cardHeading,.cardPrice,.cardQty{
-        margin-top: 0;
-    } */
+    .cardHeading,.cardPrice,.cardQty{
+        margin: 0;
+        color: var(--background);
+    }
+    .cardHeading{
+        margin-bottom: .5rem;
+    }
 }
