@@ -30,7 +30,7 @@ export default function HamburgerBtn(props:hamburgerProps){
         <li className={globalstyle.navListElementsMenu}>
             {clientWidth<800?
             <section className={globalstyle.hamburger}>
-               <button onClick={togglehamburger}>
+               <button title="mobile->hamburger to display navigation" onClick={togglehamburger}>
                     {props.fontAwesomeHamburger}
                 </button> 
             </section>:null}

@@ -1,0 +1,54 @@
+.messageContainer {
+    display: flex;
+    flex-direction: row;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    width: 100%;
+    background-color: white;
+    overflow: hidden;
+   margin-bottom: 1rem;
+}
+
+.senderInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    
+}
+.header, .senderInfo{
+    margin-left: 1rem;
+}
+
+.senderMetaData{
+    /* width: auto; */
+    margin-right: 1rem;
+    display: flex;
+    /* gap: 2rem; */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.messageCountContainer {
+    width: 2rem;
+    height: 2rem;
+    margin-bottom: 6.4px; /* so container doesnt touch bottom of it parent container*/
+    border-radius: 50%;
+    background-color: var(--button-background-color);
+    display: flex;
+    margin-left: calc(50% - 1rem); /*centers the new msg container*/
+    flex-direction: column;
+    justify-content: center;
+}
+.messageCountContainer>p{
+    /* margin-top: calc(12.8px); */
+    text-align: center;
+    color: var(--background);
+}
+.senderInfo p,.senderMetaData p{
+    font-size: .8rem;
+}
+.senderInfo>h2{
+    margin-top: 12.8px;
+    margin-bottom: 12.8px;
+}
