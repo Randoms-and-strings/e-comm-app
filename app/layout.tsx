@@ -44,7 +44,7 @@ export default function RootLayout({
           href="/assets/cart-shopping-solid-full"/>
       </Head>
       <body className={`${globalstyle.body} ${lato.className}`}>    
-        <nav style={{position:"sticky", top:"0px", zIndex:"0"}}>
+        <nav style={{position:"sticky", top:"0px", zIndex:"1"}}>
 
           
           

@@ -4,6 +4,7 @@ import handleUuid from "./hooks/serverHooks/handleKeyUuid";
 import { useRef, useState } from "react";
 
 export default function Home() {
+  
   type homeCardLayout = {
     productName: string,
     productCost: number,

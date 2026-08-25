@@ -2,7 +2,7 @@ import messageStyles from "../styles/messages.module.css";
 import handleUuid from "../hooks/serverHooks/handleKeyUuid";
 
 
-export default function Profile(){
+export default function Messages(){
     const mockMessageData = [1, 2, 3];
     return (
         <section>
