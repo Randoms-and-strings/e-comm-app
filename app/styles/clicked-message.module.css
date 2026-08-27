@@ -1,10 +1,20 @@
 .pageContainer{
     background-color: white;
-    padding: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     height: auto;
     position: relative;
 }
 
+.messageTime{
+    position: absolute;
+    bottom: 0.5rem;
+    right: .5rem;
+    font-size: .8rem;
+    color: grey;
+    margin-bottom: 0;
+}
 .senderBubble,.recipientBubble,.inputContainer>input{
     /* max-width: 50vw; */
     width: 50vw;
@@ -46,14 +56,14 @@
 .inputContainer>button{
     width: 20%;
     border: 0;
-    background-color: var(--button-background-color);
+    background-color: var(--button-ncta-bg-color);
     color: var(--button-text-color);
     cursor: pointer;
     /* border-radius: 50%; */
 }
 .inputContainer>button:hover{
-    color:var(--button-text-color);
-    background-color: var(--button-hover-bg-color);
+    color:black;
+    background-color: var(--button-ncta-hover-bg-color);
 }
 .inputContainer{
     display: flex;
@@ -63,12 +73,35 @@
     height: auto;
 }
 
-/* .topOfMessages{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 20vh;
-    background-color: #fff;
-    z-index: 8000;
-} */
+.topOfMessages{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding-left: 1rem;
+    box-shadow: .3rem .3rem .3rem var(--background);
+    z-index: 1;
+    position: relative;
+    margin-left: -1rem;
+    margin-right:calc(-1rem + .3rem);
+    margin-bottom: .9rem;
+}
+.topOfMessages>div{
+    height: 100%;
+    font-size: 1.5rem;
+    margin-top: auto;
+    margin-bottom: auto;
+   
+}
+.topOfMessages>div>a{
+    text-decoration: none;
+    color: var(--button-ncta-bg-color);
+}
+.topOfMessages>div>a:hover{
+    color: var(--button-ncta-hover-bg-color);
+    
+}
+.topOfMessages>h2{
+    font-size: 1.5rem;
+    font-weight: 500;
+}

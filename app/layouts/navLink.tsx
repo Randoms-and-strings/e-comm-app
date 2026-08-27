@@ -1,8 +1,7 @@
 'use client'
 import globalstyle from "../globals.module.css";
 import Link from 'next/link';
-import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { usePathname } from "next/navigation";;
 import { JSX } from "react/jsx-runtime";
 
 type navProp = {
@@ -24,7 +23,7 @@ export default function NavLink(props:navProp) {
             <Link className={classes} 
             id={props.id}
             href={props.destination}
-            style={pathname===props.destination?{color:"black"}:{color:"#edeff0"}}>
+            style={pathname===props.destination?{color:"#0e7d8c"}:undefined}> 
             {props.innerText?props.innerText:props.children}
             </Link>
             </div>

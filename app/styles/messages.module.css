@@ -6,8 +6,11 @@
     width: 100%;
     background-color: white;
     overflow: hidden;
-   margin-bottom: 1rem;
+   margin-bottom: .5rem;
    cursor: pointer;
+}
+.messageContainer:hover{
+    box-shadow: .1rem .1rem .1rem grey;
 }
 
 .senderInfo{
@@ -52,4 +55,7 @@
 .senderInfo>h2{
     margin-top: 12.8px;
     margin-bottom: 12.8px;
+}
+.link{
+    color: inherit;
 }

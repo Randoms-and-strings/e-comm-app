@@ -2,6 +2,8 @@
   --background: #edeff0;
   --foreground: #171717;
   --button-background-color:#e1341e;
+  --button-ncta-bg-color: #1ecbe1;
+  --button-ncta-hover-bg-color: #0e7d8c;
   --button-hover-text-color: black;
   --button-hover-bg-color:#350502;
     --button-text-color: white;
@@ -45,6 +47,7 @@
   margin-right: calc(8.32% - 1.5rem );
   z-index: var(--mainpage-contents-zindex);
   position: relative;
+  margin-bottom: 4rem;
 }
 .menuNav{
   display: flex;
@@ -84,7 +87,9 @@
   color: black;
 }
 .navAnchorTagsClicked{
-  color: black;
+  /* color: black; */
+  /* color: var(); */
+  font-weight: 500;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,7 +126,7 @@
   height: 4rem;
   position: fixed;
   bottom: 0;
-  margin-top: 1rem;
+ 
 }
 
 .searchButtonParentDiv {

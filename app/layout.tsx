@@ -7,17 +7,18 @@ import SearchBar from "./layouts/searchBar";
 import HamburgerBtn from "./layouts/hamburgerBtn";
 import { Lato } from 'next/font/google'
 import Head from "next/head";
-import { config } from '@fortawesome/fontawesome-svg-core';
-import '@fortawesome/fontawesome-svg-core/styles.css';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faCartShopping, faMagnifyingGlass, faBars } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { config } from '@fortawesome/fontawesome-svg-core';
+// import '@fortawesome/fontawesome-svg-core/styles.css';
+// import { library } from '@fortawesome/fontawesome-svg-core';
+// import { faCartShopping, faMagnifyingGlass, faBars } from '@fortawesome/free-solid-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { hamburger, magnifyingGlass, shoppingCart } from "./assets/fontAwesome";
 import CartCount from "./components/cartcount";
-import path from "./components/trypathname";
 
 
-config.autoAddCss = false;
-let lib = library.add(faCartShopping, faMagnifyingGlass, faBars);
+// config.autoAddCss = false;
+// let lib = library.add(faCartShopping, faMagnifyingGlass, faBars);
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -52,19 +53,19 @@ export default function RootLayout({
           
           <ul className={globalstyle.globalNav}>
 
-            <HamburgerBtn fontAwesomeHamburger={<FontAwesomeIcon icon='bars' className="hamburger-icon" />}/>
+            <HamburgerBtn fontAwesomeHamburger={hamburger}/>
             
             
             {allNavHeaders.map((each:string)=> {
               const lowercaseValue = each.toLowerCase();
               if(lowercaseValue === "search"){
                 return (
-                  <SearchBar key={handleUuid()} fontAwesome={<FontAwesomeIcon icon='magnifying-glass' className='magnifying-glass' />}/>
+                  <SearchBar key={handleUuid()} fontAwesome={magnifyingGlass}/>
                 );
               }else if(lowercaseValue === "cart"){
                 return (
                 <NavLink key={handleUuid()} id={lowercaseValue} classlist={`${globalstyle.navAnchorTags}`} destination={`/${lowercaseValue}`}>
-                    <FontAwesomeIcon icon='cart-shopping' />
+                    {shoppingCart}
                     <CartCount /> 
                 </NavLink>);
               }

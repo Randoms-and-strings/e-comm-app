@@ -1,5 +1,6 @@
 import messageStyles from "../styles/messages.module.css";
 import handleUuid from "../hooks/serverHooks/handleKeyUuid";
+import Link from "next/link";
 
 
 export default function Messages(){
@@ -10,7 +11,8 @@ export default function Messages(){
                 <h1 className={messageStyles.header}>Messages</h1>
                 {mockMessageData.map((count)=>{
                     return(
-                        <div key={handleUuid()} className={messageStyles.messageContainer}>
+                        <Link className={messageStyles.link} style={{textDecoration:"none"}} key={handleUuid()} href="/messages/a">
+                        <div  className={messageStyles.messageContainer}>
                             <div title="senderName & isTyping" className={messageStyles.senderInfo}>
                                 <h2>User A</h2>
                                 <em><p style={{color:"grey"}}>User A is typing....</p></em>
@@ -25,6 +27,8 @@ export default function Messages(){
                                 {/*TODO: if new msg true, bolden time, and new msg should be colored blue */}
                             </div>
                         </div>
+                        </Link>
+                        
                     );
                 })}
                 
