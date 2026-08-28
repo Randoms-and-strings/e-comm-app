@@ -3,19 +3,23 @@ import globalstyle from "../globals.module.css";
 import Link from 'next/link';
 import { usePathname } from "next/navigation";;
 import { JSX } from "react/jsx-runtime";
-
+import { useHamburgerToggle } from "../layouts/handleBodyContext";
+import useClientWidth from "../hooks/clientHooks/getClientWindowSize";
 type navProp = {
     id:string,
     innerText?: string,
     classlist: string,
     destination:string,
-    children?:JSX.Element[]
+    children?:JSX.Element[],
+    hamburgerToggle?:()=>void,
 }
 
 export default function NavLink(props:navProp) {
     const pathname = usePathname();
+    const {toggle} = useHamburgerToggle();
+    const clientWidth = useClientWidth();
     let classes:string = props.classlist;
-    console.log(pathname);
+    // console.log(pathname);
         
     return (
         <li className={`${props.id==="cart"?globalstyle.cart:""} ${globalstyle.navListElements}`}>
@@ -23,6 +27,7 @@ export default function NavLink(props:navProp) {
             <Link className={classes} 
             id={props.id}
             href={props.destination}
+            onClick={props.hamburgerToggle||(props.id==="cart" && clientWidth<800)?props.hamburgerToggle||toggle:undefined}
             style={pathname===props.destination?{color:"#0e7d8c"}:undefined}> 
             {props.innerText?props.innerText:props.children}
             </Link>

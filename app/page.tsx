@@ -1,7 +1,7 @@
-"use client"
-import homestyles from "./styles/home.module.css"
+import homestyles from "./styles/home.module.css";
+import HomeCard from "./components/imgDisplay";
 import handleUuid from "./hooks/serverHooks/handleKeyUuid";
-import { useRef, useState } from "react";
+
 
 export default function Home() {
   
@@ -11,7 +11,6 @@ export default function Home() {
     qty: number,
     link: string,
   };
-
 
 
   const mockResponse:homeCardLayout[] = [
@@ -51,29 +50,34 @@ export default function Home() {
   return (
     <section className={homestyles.cardContainer}>
     {mockResponse.map((item:homeCardLayout)=>{
-      const imageRef = useRef(item.link);
-      const [isImageHovered, changeIsImageHovered] = useState(false);
+     
       return(
-        <div key={handleUuid()} className={homestyles.card}>
-            <div className={homestyles.cardImg}>
-              <img  onMouseOver={()=>{
-                if(imageRef.current === item.link){
-                  changeIsImageHovered(true);
-                }
-              }} onMouseOut={()=>{
-                changeIsImageHovered(false);
-              }} src={item.link}  />
-            </div>
-            <div style={isImageHovered?{display:"none"}:{display:"block"}}  className={homestyles.cardTextsContainer}>
-              <h2 className={homestyles.cardHeading}>{item.productName}</h2>
-              <div  className={homestyles.cardQtyAndCostContainer}>
-                <p className={homestyles.cardPrice}>Cost: ${item.productCost}</p>
-                <p className={homestyles.cardQty}>Qty: <span style={item.qty<6?{color:"red"}:{color:"white"}}>{item.qty}</span> Left</p>
-              </div>
-              <button className={homestyles.addToCart}>Add to cart</button>
-            </div>
+        <HomeCard key={handleUuid()}
+          imageLink={item.link}
+          productName={item.productName}
+          productCost={item.productCost}
+          productQty={item.qty}
+        />
+        // <div key={handleUuid()} className={homestyles.card}>
+        //     <div className={homestyles.cardImg}>
+        //       <img  onMouseOver={()=>{
+        //         if(imageRef.current === item.link){
+        //           changeIsImageHovered(true);
+        //         }
+        //       }} onMouseOut={()=>{
+        //         changeIsImageHovered(false);
+        //       }} src={item.link}  />
+        //     </div>
+        //     <div style={isImageHovered?{display:"none"}:{display:"block"}}  className={homestyles.cardTextsContainer}>
+        //       <h2 className={homestyles.cardHeading}>{item.productName}</h2>
+        //       <div  className={homestyles.cardQtyAndCostContainer}>
+        //         <p className={homestyles.cardPrice}>Cost: ${item.productCost}</p>
+        //         <p className={homestyles.cardQty}>Qty: <span style={item.qty<6?{color:"red"}:{color:"white"}}>{item.qty}</span> Left</p>
+        //       </div>
+        //       <button onClick={increment} className={homestyles.addToCart}>Add to cart</button>
+        //     </div>
             
-        </div>
+        // </div>
       ); 
     })}
     </section>

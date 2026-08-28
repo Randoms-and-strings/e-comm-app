@@ -10,7 +10,7 @@
    cursor: pointer;
 }
 .messageContainer:hover{
-    box-shadow: .1rem .1rem .1rem grey;
+    box-shadow: .1rem .1rem .1rem var(--button-ncta-hover-bg-color);
 }
 
 .senderInfo{

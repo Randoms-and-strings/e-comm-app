@@ -1,23 +1,13 @@
 import type { Metadata } from "next";
 import globalstyle from "./globals.module.css";
 import "./styles/icon-styles.css";
-import handleUuid from "./hooks/serverHooks/handleKeyUuid";
-import NavLink from "./layouts/navLink";
-import SearchBar from "./layouts/searchBar";
-import HamburgerBtn from "./layouts/hamburgerBtn";
+import Body from "./layouts/bodyComponent";
+
 import { Lato } from 'next/font/google'
 import Head from "next/head";
-// import { config } from '@fortawesome/fontawesome-svg-core';
-// import '@fortawesome/fontawesome-svg-core/styles.css';
-// import { library } from '@fortawesome/fontawesome-svg-core';
-// import { faCartShopping, faMagnifyingGlass, faBars } from '@fortawesome/free-solid-svg-icons';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { hamburger, magnifyingGlass, shoppingCart } from "./assets/fontAwesome";
-import CartCount from "./components/cartcount";
+import CartCountHook, {HamburgerContext} from "./layouts/handleBodyContext";
 
 
-// config.autoAddCss = false;
-// let lib = library.add(faCartShopping, faMagnifyingGlass, faBars);
 
 
 export const metadata: Metadata = {
@@ -39,46 +29,51 @@ export default function RootLayout({
   const allNavHeaders:string[] = ["Search", "Cart"];
   // const ulRef = useRef(null);
   return (
-    <html lang="en"> 
+    <html lang="en" className={globalstyle.html}> 
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="icon"
           href="/assets/cart-shopping-solid-full"/>
       </Head>
       <body className={`${globalstyle.body} ${lato.className}`}>    
-        <nav style={{position:"sticky", top:"0px", zIndex:"1"}}>
+        <CartCountHook>
 
-          
-          
-          
-          <ul className={globalstyle.globalNav}>
-
-            <HamburgerBtn fontAwesomeHamburger={hamburger}/>
+          <Body allNavHeaders={allNavHeaders}>{children}</Body>
+            
+          {/* <nav style={{position:"sticky", top:"0px", zIndex:"1"}}>
+          <Bo
             
             
-            {allNavHeaders.map((each:string)=> {
-              const lowercaseValue = each.toLowerCase();
-              if(lowercaseValue === "search"){
-                return (
-                  <SearchBar key={handleUuid()} fontAwesome={magnifyingGlass}/>
-                );
-              }else if(lowercaseValue === "cart"){
-                return (
-                <NavLink key={handleUuid()} id={lowercaseValue} classlist={`${globalstyle.navAnchorTags}`} destination={`/${lowercaseValue}`}>
-                    {shoppingCart}
-                    <CartCount /> 
-                </NavLink>);
-              }
+            
+            <ul className={globalstyle.globalNav}>
+
+              <HamburgerBtn fontAwesomeHamburger={hamburger}/>
               
-            })}
-          </ul>
-        </nav>
+              
+              {allNavHeaders.map((each:string)=> {
+                const lowercaseValue = each.toLowerCase();
+                if(lowercaseValue === "search"){
+                  return (
+                    <SearchBar key={handleUuid()} fontAwesome={magnifyingGlass}/>
+                  );
+                }else if(lowercaseValue === "cart"){
+                  return (
+                  <NavLink key={handleUuid()} id={lowercaseValue} classlist={`${globalstyle.navAnchorTags}`} destination={`/${lowercaseValue}`}>
+                      {shoppingCart}
+                      <CartCount /> 
+                  </NavLink>);
+                }
+                
+              })}
+            </ul>
+          </nav>
 
-        <header></header>
-        <main  className={globalstyle.main}>
-          {children}
-          
-        </main>
+          <header></header>
+          <main  className={globalstyle.main}>
+            {children}
+            
+          </main> */}
+        </CartCountHook>
         <footer className={globalstyle.footer}></footer>
       </body>
     </html>
