@@ -1,7 +1,7 @@
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faArrowLeft, faBars, faMagnifyingGlass, faCartShopping, faFilter, faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faBars, faMagnifyingGlass, faCartShopping, faFilter, faChevronDown, faTrashCan } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "../styles/icon-styles.css";
 config.autoAddCss = false;
@@ -13,4 +13,5 @@ let magnifyingGlass = <FontAwesomeIcon icon='magnifying-glass' className='magnif
 let shoppingCart  = <FontAwesomeIcon icon='cart-shopping' />
 let filterIcon = <FontAwesomeIcon icon={faFilter} className='filter-icon'/>
 let dropdownIcon = <FontAwesomeIcon icon={faChevronDown} className='dropdown-icon'/>
-export {arrowLeft, hamburger, magnifyingGlass, shoppingCart, filterIcon, dropdownIcon};
+let trashCan = <FontAwesomeIcon icon={faTrashCan} className='trash-can'/>
+export {arrowLeft, hamburger, magnifyingGlass, shoppingCart, filterIcon, dropdownIcon, trashCan};

@@ -25,6 +25,8 @@
     color: grey;
 }
 
-/* .back-arrow{
-    font-weight: 200;
-} */
+.trash-can{
+    /* font-weight: 200; */
+    color: var(--button-background-color);
+    /* font-size: 2rem; */
+}
