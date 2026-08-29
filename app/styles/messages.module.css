@@ -5,12 +5,24 @@
     justify-content: space-between;
     width: 100%;
     background-color: white;
-    overflow: hidden;
+    /* overflow: hidden; */
    margin-bottom: .5rem;
    cursor: pointer;
+   position: relative;
+   transition: opacity 0.1s;
 }
-.messageContainer:hover{
-    box-shadow: .1rem .1rem .1rem var(--button-ncta-hover-bg-color);
+.messageContainer::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: .2rem .2rem .2rem var(--button-ncta-hover-bg-color);
+    opacity: 0;
+}
+.messageContainer:hover::before{
+    opacity: 1;
 }
 
 .senderInfo{

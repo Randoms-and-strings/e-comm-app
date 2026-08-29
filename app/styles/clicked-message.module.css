@@ -56,14 +56,18 @@
 .inputContainer>button{
     width: 20%;
     border: 0;
-    background-color: var(--button-ncta-bg-color);
-    color: var(--button-text-color);
+    background-color: var(--button-ncta-hover-bg-color);
+    color: var(--background);
+    font-weight: 500;
+    
     cursor: pointer;
     /* border-radius: 50%; */
+    transition: background-color 0.1s, color 0.1s;
 }
 .inputContainer>button:hover{
-    color:black;
-    background-color: var(--button-ncta-hover-bg-color);
+    /* color:black; */
+    color: black;
+    background-color: var(--button-ncta-bg-color);
 }
 .inputContainer{
     display: flex;

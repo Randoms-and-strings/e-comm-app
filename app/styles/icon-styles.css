@@ -16,6 +16,15 @@
     color: #16a2b4;
 }
 
+.filter-icon{
+    position: absolute;
+    left: .2rem;
+    top: 50%;
+    transform: translate(0%, -50%);
+    font-size: .9rem;
+    color: grey;
+}
+
 /* .back-arrow{
     font-weight: 200;
 } */

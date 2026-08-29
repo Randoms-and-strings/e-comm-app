@@ -1,0 +1,32 @@
+.container{
+    padding: 1rem;
+    
+}
+.inputContainer{
+    max-width: 30vw;
+    min-width: auto;
+    position: relative;
+}
+.inputContainer>select{
+    width: 100%;
+    background-color: var(--background);
+    border: 1px solid grey;
+    color: black;
+    padding: .3rem;
+    border-radius: .5rem;
+    text-align: center;
+}
+.inputContainer>select option{
+    /* background-color: white!important; */
+    cursor: pointer;
+}
+.inputContainer>select>option:active{
+    background-color: #1ecbe1;
+}
+.inputContainer>select>option:checked{
+    background: #1ecbe1;
+    color: white;
+}
+.inputContainer>select>option:not(:checked){
+    background: var(--background);
+}
