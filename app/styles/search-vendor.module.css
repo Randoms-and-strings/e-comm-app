@@ -1,0 +1,64 @@
+.container {
+    padding: 1rem;
+    background-color: white;
+    height: auto;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    transition: opacity 0.2s, color 0.2s, font-weight 0.2s;
+}
+.container::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 1rem;
+    box-shadow: .2rem .2rem .2rem var(--button-ncta-hover-bg-color);
+    opacity: 0;
+}
+.container:hover::before{
+    opacity: 1;
+}
+.container:active::before,.container:active{
+    animation: click-animation 0.1s;
+    /* transform: translate(-0.05rem, -0.05rem); */
+}
+/* .container:active{
+    transform: translate(-0.05rem, -0.05rem);
+} */
+.container:hover>p{
+    color: var(--button-ncta-hover-bg-color);
+    font-weight: 600;
+    
+}
+.container>p{
+    font-size: .8rem;
+    color: var(--button-ncta-bg-color);
+    font-style: italic;
+    font-weight: 500;
+}
+.container>h3{
+    font-size: 1.5rem;
+}
+
+@keyframes click-animation {
+    0%{
+        transform: translate(0px, 0px);
+    }50%{
+        transform: translate(2px, 2px);
+    }100%{
+        transform: translate(0px, 0px);
+    }
+}
+
+/* @keyframes click-animation {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+} */

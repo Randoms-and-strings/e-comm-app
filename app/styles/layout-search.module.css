@@ -3,30 +3,31 @@
     
 }
 .inputContainer{
-    max-width: 30vw;
+    max-width: 33%;
     min-width: auto;
     position: relative;
+    margin-bottom: 2rem;
 }
 .inputContainer>select{
     width: 100%;
     background-color: var(--background);
-    border: 1px solid grey;
-    color: black;
+    border: 1px solid black;
+    color: grey;
     padding: .3rem;
     border-radius: .5rem;
     text-align: center;
 }
-.inputContainer>select option{
-    /* background-color: white!important; */
-    cursor: pointer;
+.inputContainer>select:hover{
+    border: 2px solid grey;
 }
-.inputContainer>select>option:active{
-    background-color: #1ecbe1;
+
+.inputContainer>select>option:checked, .inputContainer>select>option:hover{
+    box-shadow: 0 0 10px 100px #000 inset;
 }
-.inputContainer>select>option:checked{
+/* .inputContainer>select>option:checked{
     background: #1ecbe1;
     color: white;
 }
 .inputContainer>select>option:not(:checked){
     background: var(--background);
-}
+} */
