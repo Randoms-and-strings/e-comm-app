@@ -30,3 +30,18 @@
     color: var(--button-background-color);
     /* font-size: 2rem; */
 }
+.trash-can:hover{
+    color: var(--button-hover-bg-color);
+}
+
+.check-mark{
+    color: green;
+    font-size: 150px;
+    margin-top: 1rem;
+    /* margin-top: 25%;
+    transform: translateY(-25%); */
+    /* margin-top: auto;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto; */
+}

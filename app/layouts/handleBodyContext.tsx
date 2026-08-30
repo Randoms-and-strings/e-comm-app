@@ -23,7 +23,10 @@ export default function NoOfProductsInCart({children}:child){
     }
 
     const decrement = () =>{
-        changeItemCount(itemCount - 1);
+        if(itemCount>0){
+           changeItemCount(itemCount - 1); 
+        }
+        
     }
 
     return(

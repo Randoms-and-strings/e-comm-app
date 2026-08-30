@@ -1,6 +1,6 @@
 .h1{
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.7rem;
     position: relative;
     width: fit-content;
     margin-left: auto;
@@ -66,24 +66,44 @@
 
 .totalPriceContainer{
     background-color: white;
-    height: 80px;
+    height: 5vh;
     padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2rem;
 }
-.totalPriceContainer>h2{
-    width: 50%;
-    display: inline-block;
-    /* margin-top: auto; */
-    margin-top: 60px;
+ .totalPriceContainer>h2{
+    
+    margin-top: auto;
     
 }
-/* .totalPriceContainer:nth-child(2){
-    text-align: right;
-} */
+
 .total{
     text-align: right;
 }
 
-.placeOrderbutton{
+.placeOrderButton{
     background-color: var(--button-background-color);
-    padding: 1rem;
+    color: var(--background);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border: 0;
+    font-size: .9rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    /* margin-left: calc(100% - 1rem);
+    transform: translateX(-50%); */
+    /* margin-right: 0; */
  }
+ .placeOrderButton:hover{
+    background-color: var(--button-hover-bg-color);
+ }
+ .placeOrderButton:disabled{
+    background-color: grey;
+    color: var(--background);
+ }
+.buttonContainer{
+    width: 100%;
+    text-align: right;
+}
