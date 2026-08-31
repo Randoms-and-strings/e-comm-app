@@ -8,13 +8,13 @@ type contextValue = {
     increment:()=>void,
     decrement:()=>void
 }
-type hamburgerContextValue = {
-    isToggled: boolean,
-    toggle:()=>void,
+// type hamburgerContextValue = {
+//     isToggled: boolean,
+//     toggle:()=>void,
     
-}
+// }
 const cartAdditionContext = createContext<contextValue|null>(null);
-const hamburgerContext = createContext<hamburgerContextValue|null>(null);
+// const hamburgerContext = createContext<hamburgerContextValue|null>(null);
 export default function NoOfProductsInCart({children}:child){
     const [itemCount, changeItemCount] = useState(0);
     
@@ -35,21 +35,21 @@ export default function NoOfProductsInCart({children}:child){
         </cartAdditionContext.Provider>
     );
 }
-export function HamburgerContext({children}:child){
-    const [isToggled, changeIsToggled] = useState(false);
-    const toggle = () => {
-        if(isToggled){
-            changeIsToggled(false);
-            return;
-        }
-        changeIsToggled(true);
-    }
-    return(
-        <hamburgerContext.Provider value={{isToggled, toggle}}>
-            {children}
-        </hamburgerContext.Provider>
-    );
-}
+// export function HamburgerContext({children}:child){
+//     const [isToggled, changeIsToggled] = useState(false);
+//     const toggle = () => {
+//         if(isToggled){
+//             changeIsToggled(false);
+//             return;
+//         }
+//         changeIsToggled(true);
+//     }
+//     return(
+//         <hamburgerContext.Provider value={{isToggled, toggle}}>
+//             {children}
+//         </hamburgerContext.Provider>
+//     );
+// }
 
 
 export const usecartAddition = () => {
@@ -59,13 +59,13 @@ export const usecartAddition = () => {
   }
   return context;
 };
-export const useHamburgerToggle = () => {
-  const context = useContext(hamburgerContext);
-  if (!context) {
-    throw new Error("useHamburger must be used within a Child of the context");
-  }
-  return context;
-};
+// export const useHamburgerToggle = () => {
+//   const context = useContext(hamburgerContext);
+//   if (!context) {
+//     throw new Error("useHamburger must be used within a Child of the context");
+//   }
+//   return context;
+// };
 
 
 

@@ -1,21 +1,27 @@
 "use client";
-import { useState } from "react";
 import cartStyle from "../styles/cart.module.css";
+import { useBackgroundBlur } from "../hooks/clientHooks/handleBackgroundBlur";
+import {useAnimation} from "../hooks/clientHooks/handleShowAnimation";
 
 type button = {
-    innertext:string
+    innertext:string,
 }
 export default function ButtonIdempotent(props:button){
-    const [isClicked, changeIsClicked] = useState(false);
+    const {isButtonClicked, ShowAnimation} = useAnimation();
+    const {blurBackground} = useBackgroundBlur();
     function handleClick(){
         // e.preventDefault();
-        if(!isClicked){
-            changeIsClicked(true);
+        if(!isButtonClicked){
+            
+            blurBackground();
+            ShowAnimation();
+
         }
     }
     return(
-        <button className={cartStyle.placeOrderButton} onClick={handleClick}
-        disabled={isClicked}
+        
+        <button style={isButtonClicked?{visibility:"hidden"}:undefined} className={cartStyle.placeOrderButton} onClick={handleClick}
+        disabled={isButtonClicked}
         >
             {props.innertext}
         </button>

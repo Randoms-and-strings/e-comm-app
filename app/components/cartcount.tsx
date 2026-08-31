@@ -1,6 +1,6 @@
 "use client";
 import "../styles/component-styles.css";
-import  {usecartAddition}  from "../layouts/handleBodyContext";
+import  {usecartAddition}  from "../hooks/clientHooks/handleCartCounts";
 
 
 

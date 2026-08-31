@@ -1,5 +1,5 @@
 "use client";
-import {usecartAddition} from "../layouts/handleBodyContext";
+import {usecartAddition} from "../hooks/clientHooks/handleCartCounts";
 import homestyles from "../styles/home.module.css"
 import {useState} from "react";
 type homeCardProp = {

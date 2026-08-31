@@ -107,3 +107,7 @@
     width: 100%;
     text-align: right;
 }
+.hiddenButton{
+    position: fixed;
+    bottom: -10vh;
+}

@@ -6,7 +6,8 @@ import HamburgerBtn from "../layouts/hamburgerBtn";
 import handleUuid from "../hooks/serverHooks/handleKeyUuid";
 import { hamburger, magnifyingGlass, shoppingCart } from "../assets/fontAwesome";
 import { ReactNode } from "react";
-import {HamburgerContext} from "../layouts/handleBodyContext";
+import {HamburgerContext} from "../hooks/clientHooks/handleHamburgerBtnClick";
+
 type layoutProps = {
 
     allNavHeaders:string[],
@@ -59,10 +60,17 @@ export default function Body(props:layoutProps){
           </nav>
 
           <header></header>
-          <main  className={globalstyle.main}>
+          {/* <BackgroundBlurContext> */}
+            {/* <MainTagComponent>
+              {props.children}
+            </MainTagComponent> */}
+            <main  className={globalstyle.main}>
             {props.children}
             
-          </main>
+            </main>
+          {/* <LoaderAnimationComponent>{checkicon}</LoaderAnimationComponent> */}
+          {/* </BackgroundBlurContext> */}
+          
           </div>
     );
 }

@@ -1,6 +1,6 @@
 "use client";
 import cartStyle from "../styles/cart.module.css";
-import { usecartAddition } from "../layouts/handleBodyContext";
+import { usecartAddition } from "../hooks/clientHooks/handleCartCounts";
 type child = {
     children: React.ReactNode;
 }

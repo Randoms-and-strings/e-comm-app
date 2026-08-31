@@ -34,14 +34,33 @@
     color: var(--button-hover-bg-color);
 }
 
-.check-mark{
+.check-mark, .error-x-mark, .spinner-icon{
     color: green;
     font-size: 150px;
     margin-top: 1rem;
-    /* margin-top: 25%;
-    transform: translateY(-25%); */
-    /* margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto; */
+    
+}
+.x-mark{
+    font-style: 1.5rem;
+    color: red;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.error-x-mark{
+    color: red;
+}
+.spinner-icon{
+    font-size: 60px;
+    color: var(--button-ncta-bg-color);
+    animation: rotate-spinner 2s 0s infinite;
+}
+
+@keyframes rotate-spinner{
+    100%{
+        transform: rotate(360deg);
+    }
 }

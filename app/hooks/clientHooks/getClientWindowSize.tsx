@@ -13,7 +13,7 @@ export default function useClientWidth():number{
         handleClientScreenWidth();
         return () => window.removeEventListener("resize", handleClientScreenWidth);
     }, []);
-    console.log(clientWindowWidth);
+    // console.log(clientWindowWidth);
 
     return clientWindowWidth;
 }

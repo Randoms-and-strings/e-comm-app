@@ -3,7 +3,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { 
     faArrowLeft, faBars, faMagnifyingGlass, faCartShopping, faFilter, faChevronDown, faTrashCan,
-    faCircleCheck, faXmark
+    faCircleCheck, faXmark, faSquareXmark, faSpinner
         } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "../styles/icon-styles.css";
@@ -19,6 +19,8 @@ let dropdownIcon = <FontAwesomeIcon icon={faChevronDown} className='dropdown-ico
 let trashCan = <FontAwesomeIcon icon={faTrashCan} className='trash-can'/>
 let checkicon = <FontAwesomeIcon icon={faCircleCheck} className='check-mark' />
 let xMark = <FontAwesomeIcon icon={faXmark} className='x-mark'/>
+let errorXMark = <FontAwesomeIcon icon={faSquareXmark} className='error-x-mark' />
+let spinner = <FontAwesomeIcon icon={faSpinner} className='spinner-icon' />
 export {arrowLeft, hamburger, magnifyingGlass, shoppingCart, filterIcon, dropdownIcon, trashCan, checkicon,
-    xMark
+    xMark, errorXMark, spinner
 };

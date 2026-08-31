@@ -5,7 +5,7 @@ import NavLink from "./navLink";
 import handleUuid from "../hooks/serverHooks/handleKeyUuid";
 import globalstyle from "../globals.module.css";
 import useClientWidth from "../hooks/clientHooks/getClientWindowSize";
-import { useHamburgerToggle } from "./handleBodyContext";
+import { useHamburgerToggle } from "../hooks/clientHooks/handleHamburgerBtnClick";
 
 export type hamburgerProps = {
     

@@ -3,7 +3,7 @@ import globalstyle from "../globals.module.css";
 import Link from 'next/link';
 import { usePathname } from "next/navigation";;
 import { JSX } from "react/jsx-runtime";
-import { useHamburgerToggle } from "../layouts/handleBodyContext";
+import { useHamburgerToggle } from "../hooks/clientHooks/handleHamburgerBtnClick";
 import useClientWidth from "../hooks/clientHooks/getClientWindowSize";
 type navProp = {
     id:string,

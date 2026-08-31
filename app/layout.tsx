@@ -5,7 +5,7 @@ import Body from "./layouts/bodyComponent";
 
 import { Lato } from 'next/font/google'
 import Head from "next/head";
-import CartCountHook, {HamburgerContext} from "./layouts/handleBodyContext";
+import CartCountHook from "./hooks/clientHooks/handleCartCounts";
 
 
 
