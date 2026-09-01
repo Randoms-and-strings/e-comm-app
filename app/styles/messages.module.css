@@ -6,7 +6,7 @@
     width: 100%;
     background-color: white;
     /* overflow: hidden; */
-   margin-bottom: .5rem;
+   margin-bottom: 1rem;
    cursor: pointer;
    position: relative;
    transition: opacity 0.1s;
@@ -18,12 +18,18 @@
     left: 0;
     right: 0;
     bottom: 0;
-    box-shadow: .2rem .2rem .2rem var(--button-ncta-hover-bg-color);
+    box-shadow: .2rem .2rem .2rem var(--button-ncta-bg-color);
     opacity: 0;
 }
 .messageContainer:hover::before{
     opacity: 1;
 }
+.messageContainer:active::before, .messageContainer:active{
+    animation: click-animation 0.2s;
+}
+/* .messageContainer:active::before{
+    box-shadow: .2rem .2rem .2rem var(--button-ncta-hover-bg-color);
+} */
 
 .senderInfo{
     display: flex;
@@ -70,4 +76,14 @@
 }
 .link{
     color: inherit;
+}
+
+@keyframes click-animation {
+    0%{
+        transform: translate(0px, 0px);
+    }50%{
+        transform: translate(2px, 2px);
+    }100%{
+        transform: translate(0px, 0px);
+    }
 }

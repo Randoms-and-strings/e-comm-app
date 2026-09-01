@@ -56,18 +56,24 @@
 .inputContainer>button{
     width: 20%;
     border: 0;
-    background-color: var(--button-ncta-hover-bg-color);
-    color: var(--background);
-    font-weight: 500;
+    /* background-color: var(--button-ncta-hover-bg-color); */
+    background-color: white;
     
+    color: black;
+    font-weight: 500;
+    border: 2px solid var(--button-ncta-bg-color);
     cursor: pointer;
     /* border-radius: 50%; */
     transition: background-color 0.1s, color 0.1s;
 }
 .inputContainer>button:hover{
     /* color:black; */
-    color: black;
+    color: white;
     background-color: var(--button-ncta-bg-color);
+}
+.inputContainer>button:active{
+    color: white;
+    background-color: var(--button-ncta-hover-bg-color);
 }
 .inputContainer{
     display: flex;
@@ -99,9 +105,13 @@
 }
 .topOfMessages>div>a{
     text-decoration: none;
-    color: var(--button-ncta-bg-color);
+    color: black;
 }
 .topOfMessages>div>a:hover{
+    color: var(--button-ncta-bg-color);
+    
+}
+.topOfMessages>div>a:active{
     color: var(--button-ncta-hover-bg-color);
     
 }

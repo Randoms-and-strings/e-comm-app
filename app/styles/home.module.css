@@ -8,6 +8,9 @@
     position: relative;
     transition: opacity 0.3s;
 }
+/* .card:hover>.cardTextsContainer>div{
+    display: none;
+} */
 .card::before{
     content: "";
     position: absolute;
@@ -102,6 +105,8 @@
     background-color: #350502;
     color: white;
 }
+
+/*  */
 
 @media (max-width:800px) {
     .card{

@@ -1,5 +1,5 @@
 import homestyles from "./styles/home.module.css";
-import HomeCard from "./components/imgDisplay";
+import HomeCard from "./components/imgCard";
 import handleUuid from "./hooks/serverHooks/handleKeyUuid";
 
 

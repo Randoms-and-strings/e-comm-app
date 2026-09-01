@@ -6,7 +6,7 @@
     cursor: pointer;
     margin-bottom: 1rem;
     border-radius: 1rem;
-    transition: opacity 0.2s, color 0.2s, font-weight 0.2s;
+    transition: opacity 0.2s, font-weight 0.2s;
 }
 .container::before{
     content: "";
@@ -16,7 +16,7 @@
     left: 0;
     right: 0;
     border-radius: 1rem;
-    box-shadow: .2rem .2rem .2rem var(--button-ncta-hover-bg-color);
+    box-shadow: .2rem .2rem .2rem var(--button-ncta-bg-color);
     opacity: 0;
 }
 .container:hover::before{
@@ -30,13 +30,14 @@
     transform: translate(-0.05rem, -0.05rem);
 } */
 .container:hover>p{
-    color: var(--button-ncta-hover-bg-color);
+    /* color: var(--button-ncta-bg-color); */
     font-weight: 600;
     
 }
 .container>p{
     font-size: .8rem;
-    color: var(--button-ncta-bg-color);
+    /* color: var(--button-ncta-bg-color); */
+    color: grey;
     font-style: italic;
     font-weight: 500;
 }

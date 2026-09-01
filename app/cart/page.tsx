@@ -18,6 +18,7 @@ export default function Cart(){
                         <LoaderAnimationComponent title="Loading..."
                         description="Order submitted Successfully">
                         {spinner}
+                        
                         </LoaderAnimationComponent>
                         {/* add type prop. error for red title, else normal blue color */}
                     </ButtonAnimationContext>

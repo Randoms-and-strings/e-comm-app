@@ -92,13 +92,18 @@
     font-size: .9rem;
     border-radius: 1rem;
     cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
     /* margin-left: calc(100% - 1rem);
     transform: translateX(-50%); */
     /* margin-right: 0; */
  }
  .placeOrderButton:hover{
     background-color: var(--button-hover-bg-color);
+    transform: scale(1.05, 1.05);
  }
+ /* .placeOrderButton:active{
+    
+ } */
  .placeOrderButton:disabled{
     background-color: grey;
     color: var(--background);
@@ -106,8 +111,4 @@
 .buttonContainer{
     width: 100%;
     text-align: right;
-}
-.hiddenButton{
-    position: fixed;
-    bottom: -10vh;
 }

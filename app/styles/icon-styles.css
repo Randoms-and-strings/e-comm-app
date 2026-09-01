@@ -56,10 +56,19 @@
 .spinner-icon{
     font-size: 60px;
     color: var(--button-ncta-bg-color);
-    animation: rotate-spinner 2s 0s infinite;
+    animation: rotate-spinner 2s 0s ease-in infinite;
 }
 
 @keyframes rotate-spinner{
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    75%{
+        transform: rotate(270deg);
+    }
     100%{
         transform: rotate(360deg);
     }
