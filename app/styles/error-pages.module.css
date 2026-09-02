@@ -1,3 +1,26 @@
-.imgContainer{
+.container{
+    text-align: center;
     
+}
+.imgContainer{
+    width: 150px;
+    height: 150px;
+    
+    margin-left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+.imgContainer>img{
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+}
+.imgComment{
+    position: absolute;
+    right: -40px;
+    top:20px;
+    font-weight: 500;
+    font-style: italic;
+    color: grey;
+    font-size: 14px;
 }
