@@ -1,0 +1,12 @@
+.button{
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+    /* border: 1px solid grey; */
+}
+
+.button:hover,.button:active{
+    transform: scale(1.05);
+}

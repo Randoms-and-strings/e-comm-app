@@ -58,6 +58,12 @@
     color: var(--button-ncta-bg-color);
     animation: rotate-spinner 2s 0s ease-in infinite;
 }
+.edit-icon{
+    color: var(--button-ncta-bg-color);
+    margin-left: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
 
 @keyframes rotate-spinner{
     25%{
