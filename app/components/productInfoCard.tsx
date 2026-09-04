@@ -34,7 +34,8 @@ export default function ProductInfo(props:productData){
                 </div>
                 {/* <a className={cartStyle.delete}>{props.hasEditDeleteIcon}</a> */}
                 <DeleteFromCartBtn>{props.hasEditDeleteIcon}</DeleteFromCartBtn>
-                <p className={cartStyle.qtyXSum}><b>={props.hasTotalValue}</b></p>
+                {props.hasTotalValue?<p className={cartStyle.qtyXSum}><b>={props.hasTotalValue}</b></p>:undefined}
+                
         </div>
     );
 }

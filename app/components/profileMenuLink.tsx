@@ -11,9 +11,11 @@ export default function ProfileMenuLinks(props:menuDetails){
     const style = {
         width: props.width,
     }
+    const currentPagePath = CurrentPath();
+
     return(      
-        <Link href={`/profile/user/j/${props.destination}`} 
-        style={CurrentPath().includes(props.destination)?{...style, borderBottom:"2px solid black"}:style}  
+        <Link href={`${currentPagePath}/${props.destination}`} 
+        style={currentPagePath.includes(props.destination)?{...style, borderBottom:"2px solid black"}:style}  
         className={profileStyles.menuNav}>
             {props.heading}
         </Link>

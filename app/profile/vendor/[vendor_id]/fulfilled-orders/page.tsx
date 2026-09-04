@@ -1,7 +1,7 @@
 import { trashCan } from "@/app/assets/fontAwesome";
 import ProductInfo from "@/app/components/productInfoCard";
 
-export default function Delivered(){
+export default function FulfilledOrders(){
     return(
         <ProductInfo
         imgSrc="https://tse4.mm.bing.net/th/id/OIP.Ena9yaTNPcaR7kUrDrM94wAAAA?r=0&w=300&h=300&rs=1&pid=ImgDetMain&o=7&rm=3"
