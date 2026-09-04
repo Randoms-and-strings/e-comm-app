@@ -62,7 +62,14 @@
     color: var(--button-ncta-bg-color);
     margin-left: 1rem;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    transition: transform 0.2s;
+}
+.edit-icon:hover, .edit-icon:active{
+    transform: scale(1.1);
+}
+.edit-icon:active{
+   color: var(--button-ncta-hover-bg-color);
 }
 
 @keyframes rotate-spinner{

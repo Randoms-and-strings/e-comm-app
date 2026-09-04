@@ -30,21 +30,26 @@ export default function ProfileLayout(props:profilelayoutProps){
     
     return(
         <div>
-            <h1>{props.userName}<span>{props.editIcon}</span></h1>
-            {props.descriptionTexts.map((texts, index)=>{
+            <h1 className={profileLayout.h1}>{props.userName}<span>{props.editIcon}</span></h1>
+            <div className={profileLayout.textsContainer}>
+                {props.descriptionTexts.map((texts, index)=>{
                 return(
                     
                         props.descriptionKeys?<p key={handleUuid()}><b>{props.descriptionKeys[index]}:</b> {texts}</p>:<p key={handleUuid()}>{texts}</p> 
                 );
             })}
-
-            {props.buttonTexts.map((buttonTexts, index)=>{
+            </div>
+            
+            <div>
+               {props.buttonTexts.map((buttonTexts, index)=>{
                 return(
                     <button className={profileLayout.button} key={handleUuid()} style={buttonDesign[props.buttonStyle[index]]}>
                         {buttonTexts}
                     </button>
                 );
-            })}
+            })} 
+            </div>
+            
         </div>
     );
 }
