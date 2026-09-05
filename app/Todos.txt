@@ -1,0 +1,4 @@
+in home page layout: account for profile link being user or vendor
+in profile layout: account for whether its a user acct or vendor
+messaging has same issue with click
+product info cards, make sure images are 300px x 300px to fit the card

@@ -1,0 +1,116 @@
+.productContainer {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 3rem;
+}
+.imgContainer{
+    width: 320px;
+    height: 320px;
+    border-radius: 1rem;
+}
+.imgContainer>img{
+    width: 320px;
+    height: 320px;
+    border-radius: 1rem;
+    object-fit: contain;
+}
+.h1{
+    margin-top: 0;
+}
+.textsContainer{
+    width: 100%;
+    padding: 1rem;
+    /* text-align: center; */
+    border-left: .3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.quantityContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+.quantityContainer>p,.quantityContainer>.dynamicAddToCart>p{
+    margin: 0;
+}
+
+.dynamicAddToCart{
+    width: auto;
+}
+.dynamicAddToCart>a,.counter{
+    display: inline-block;
+    width: 1.5rem;
+    border: 0.5px solid black;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    padding: .3rem;
+}
+.removeNumber{
+    border-right: 0;
+    font-weight: 600;
+    background-color: white;
+    cursor: pointer;
+}
+.addNumber{
+    border-left: 0;
+    font-weight: 600;
+    background-color: white;
+    cursor: pointer;
+}
+.counter{
+    background-color: white;
+}
+.btnDiv{
+    max-width: 320px;
+    /* margin-left: 50%;
+    transform: translateX(-50%); */
+}
+@media (min-width:356px) and (max-width:800px) {
+    .productContainer{
+        flex-direction: column;
+    }
+    .imgContainer{
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    .textsContainer{
+        margin-left: 50%;
+        transform: translateX(-50%);
+        /* width: 80%; */
+        max-width: 320px;
+        border-left: 0;
+        /* text-align: center; */
+    }
+    /* .textsContainer>p,.textsContainer>div{
+        text-align: center;
+    } */
+    .quantityContainer{
+        gap: 1rem;
+        justify-content: center;
+    }
+    /* .h2,.h1{
+        text-align: center;
+    } */
+    
+    .textsContainer>p,.h1,.quantityContainer{
+        width: fit-content;
+        /* margin-left: 50%; */
+        /* transform: translateX(-50%); */
+    }
+    .btnDiv{
+        width: 100%;
+        margin-left: 0;
+        transform: translateX(0%);
+    }
+}
+
+/* .textsContainer>p{
+    height: auto;
+} */

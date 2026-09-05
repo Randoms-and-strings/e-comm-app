@@ -15,7 +15,7 @@ export default function Profile({children}:Readonly<{children:ReactNode}>){
         buttonStyle={["white"]}
         /> 
             <ProfileMenu 
-            headings={["fulfilled-orders", "pending-orders"]}
+            headings={["fulfilled-orders","pending-orders"]}
             />
 
         {children}

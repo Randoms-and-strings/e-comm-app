@@ -14,7 +14,8 @@ export default function ProfileMenuLinks(props:menuDetails){
     const currentPagePath = CurrentPath();
 
     return(      
-        <Link href={`${currentPagePath}/${props.destination}`} 
+        // TODO: this path has a dynamic value. when backend done, change it
+        <Link href={currentPagePath.includes("users")?`/profile/users/a/${props.destination}`:`/profile/vendor/a/${props.destination}`} 
         style={currentPagePath.includes(props.destination)?{...style, borderBottom:"2px solid black"}:style}  
         className={profileStyles.menuNav}>
             {props.heading}

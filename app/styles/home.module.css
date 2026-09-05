@@ -100,6 +100,8 @@
     transition: background-color 0.3s;
     /* pointer-events: auto;
     z-index: 10; */
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 .addToCart:hover{
     background-color: #350502;
