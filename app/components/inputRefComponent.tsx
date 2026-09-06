@@ -15,11 +15,12 @@ export default function InputValue(props:inputProp){
 
             // }
             // textareaRef.current.value = ;
-            console.log(event.key);
+            textareaRef.current.style.height = "" + textareaRef.current.scrollHeight + "px";
+            // console.log(event.key);
         }
     }
     return (
-        <textarea  onChange={handleChange} ref={textareaRef} style={{height:"100%", width:"100%"}} >
+        <textarea defaultValue={props.inputValue} onFocus={handleChange} ref={textareaRef} style={{height:"fit-content", width:"100%", overflow:"hidden"}} >
         
         </textarea>
     );

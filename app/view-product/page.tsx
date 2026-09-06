@@ -1,10 +1,44 @@
 import viewProduct from "../styles/view-products.module.css";
+import ViewProductComponent from "../components/productFeaturePage+Edit";
 import AddToCartBtn from "../components/addToCartBtn";
 import HandleMultipleAddSub from "../components/handleMultipleCartAddSub";
 export default function ViewProduct(){
     return (
-        <section>
-            <div className={viewProduct.productContainer}>
+            <ViewProductComponent
+                    currentImg="https://i1.sndcdn.com/artworks-N4K4AR7hUZBi9AjB-YJQoRQ-t500x500.jpg"
+                    productName="The Product Name"
+                    productDescription="bla bla bla bla bla bla "
+                    productPrice="$50"
+                    quantityLeft="5"
+                    features="bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                            bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                            bla bla bla bla bla bla "
+                    type="page"
+                />
+        // <section>
+            /* <div className={viewProduct.productContainer}>
                 <div className={viewProduct.imgContainer}>
                     <img src="https://i1.sndcdn.com/artworks-N4K4AR7hUZBi9AjB-YJQoRQ-t500x500.jpg"/>
                 </div>
@@ -29,7 +63,7 @@ export default function ViewProduct(){
                         
                     
                     
-                    {/* <button></button> */}
+                    
                 </div>
             </div>
 
@@ -37,8 +71,29 @@ export default function ViewProduct(){
             <p>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
                 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
                 bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
+                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
                 bla bla bla bla bla bla 
-            </p>
-        </section>
+            </p> */
+        // </section>
     );
 }

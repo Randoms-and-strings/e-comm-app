@@ -2,6 +2,7 @@ import viewProduct from "../styles/view-products.module.css";
 import AddToCartBtn from "../components/addToCartBtn";
 import HandleMultipleAddSub from "../components/handleMultipleCartAddSub";
 import InputValue from "./inputRefComponent";
+// import { projectUpdate } from "next/dist/build/swc/generated-native";
 type viewProductPageProp = {
     
     currentImg: string,
@@ -23,24 +24,29 @@ export default function ViewProductComponent(props:viewProductPageProp){
                 <div className={viewProduct.textsContainer}>
                     
                         
-                        <h1 className={viewProduct.h1}>
+                        <h1 style={props.type==="form"?{fontSize:"16px",width:"100%"}:undefined} className={viewProduct.h1}>
+                            {props.type==="form"?<div><b>Product-name</b>
+                            <InputValue inputValue={props.productName}/></div>
+                            :props.productName}
                             {/* <input value={props.productName}/> */}
-                            <InputValue inputValue={props.productName}/>
+                            
                         </h1>
 
-                        <p>
+                        <p style={props.type==="form"?{width:"100%"}:undefined}>
                             <b>short-description:</b> 
                             {/* <input value={props.productDescription} /> */}
-                            <InputValue inputValue={props.productDescription}/>
+                            {props.type==="form"?<InputValue inputValue={props.productDescription}/>:props.productDescription}
                         </p>
-                        <p>
+                        <p style={props.type==="form"?{width:"100%"}:undefined}>
                             <b>price:</b> 
                             {/* <input value={props.productPrice} /> */}
-                            <InputValue inputValue={props.productPrice}/>
+                            {props.type==="form"?<InputValue inputValue={props.productPrice}/>:props.productPrice}
+                            
                         </p>
-                        <p>
+                        <p style={props.type==="form"?{width:"100%"}:undefined}>
                             <b>quantity-left:</b> 
-                            <InputValue inputValue={props.quantityLeft}/>
+                            {props.type==="form"?<InputValue inputValue={props.quantityLeft}/>:props.quantityLeft}
+                            
                             {/* <input value={props.quantityLeft}/> */}
                         </p>
 
@@ -66,10 +72,13 @@ export default function ViewProductComponent(props:viewProductPageProp){
                 </div>
             </div>
 
-            <h2 className={viewProduct.h2}>Features</h2>
+            <h2 style={props.type==="form"?{textAlign:"center"}:undefined} className={viewProduct.h2}>Features</h2>
             <p>
                 {/* <input value={props.features} /> */}
-                <InputValue inputValue={props.features}/>
+                {props.type==="form"?<InputValue inputValue={props.features}/>:
+                props.features
+                }
+                
             </p>
         </section>
     );
