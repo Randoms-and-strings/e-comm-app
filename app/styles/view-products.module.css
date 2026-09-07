@@ -9,6 +9,7 @@
     width: 320px;
     height: 320px;
     border-radius: 1rem;
+    position: relative;
 }
 .imgContainer>img{
     width: 320px;
@@ -16,6 +17,10 @@
     border-radius: 1rem;
     object-fit: contain;
 }
+/* .iconDiv{
+    border-radius: 50%;
+    background-color: white;
+} */
 .h1{
     margin-top: 0;
 }
@@ -46,31 +51,54 @@
 .dynamicAddToCart>a,.counter{
     display: inline-block;
     width: 1.5rem;
-    border: 0.5px solid black;
+    /* border: 0.5px solid black; */
     text-align: center;
     text-decoration: none;
     color: inherit;
     padding: .3rem;
 }
+
 .removeNumber{
     border-right: 0;
+    border-top: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+    border-left: 0.5px solid black;
     font-weight: 600;
     background-color: white;
     cursor: pointer;
 }
 .addNumber{
     border-left: 0;
+    border-right:  0.5px solid black;
+    border-top: 0.5px solid black;
+    border-bottom: 0.5px solid black;
     font-weight: 600;
     background-color: white;
     cursor: pointer;
 }
 .counter{
     background-color: white;
+    border: 0.5px solid black;
 }
 .btnDiv{
     max-width: 320px;
     /* margin-left: 50%;
     transform: translateX(-50%); */
+}
+.editButton{
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+.editButton>button{
+    background-color: var(--button-background-color);
+    color: var(--background);
+    border: 0;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 20%;
+    font-size: 1rem;
+    cursor: pointer;
 }
 @media (min-width:356px) and (max-width:800px) {
     .productContainer{
@@ -108,6 +136,9 @@
         width: 100%;
         margin-left: 0;
         transform: translateX(0%);
+    }
+    .editButton>button{
+        width: 50%;
     }
 }
 

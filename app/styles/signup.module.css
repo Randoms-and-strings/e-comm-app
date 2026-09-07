@@ -1,0 +1,38 @@
+/* .svgContainer>img{
+    width: 2rem;
+    height: 2rem;
+} */
+
+.iconContainer{
+    position: relative;
+    border-top: 1px solid black;
+    margin-top: 3rem;
+    /* height: auto; */
+    text-align: center;
+}
+.iconContainer>p{
+    background-color: var(--background);
+    position: absolute;
+    /* top:  calc(-16px - .5rem); */
+    top: calc(0px - 16px - 8px);
+    left: 50%;
+    padding: 1rem;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    margin: 0;
+    /* font-weight: 600; */
+
+}
+.iconContainer>a{
+ cursor: pointer;
+ margin: .5rem;
+}
+.iconContainer>a>img{
+    /* position: absolute; */
+    /* margin-top: 100%; */
+    transform: translateY(50%);
+    /* cursor: pointer; */
+}
+.input{
+    display: block;
+}

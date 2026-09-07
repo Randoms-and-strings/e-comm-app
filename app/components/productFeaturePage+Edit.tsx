@@ -2,6 +2,7 @@ import viewProduct from "../styles/view-products.module.css";
 import AddToCartBtn from "../components/addToCartBtn";
 import HandleMultipleAddSub from "../components/handleMultipleCartAddSub";
 import InputValue from "./inputRefComponent";
+import { addItemIcon } from "../assets/fontAwesome";
 // import { projectUpdate } from "next/dist/build/swc/generated-native";
 type viewProductPageProp = {
     
@@ -19,7 +20,12 @@ export default function ViewProductComponent(props:viewProductPageProp){
             <div className={viewProduct.productContainer}>
                 <div className={viewProduct.imgContainer}>
                     <img src={props.currentImg}/>
+                    
+                       {props.type==="form"? addItemIcon: undefined} 
+                    
+                    
                 </div>
+                
 
                 <div className={viewProduct.textsContainer}>
                     
@@ -80,6 +86,12 @@ export default function ViewProductComponent(props:viewProductPageProp){
                 }
                 
             </p>
+
+            {props.type ==="form"?
+            <div className={viewProduct.editButton}>
+                <button>Submit</button>
+            </div>:undefined
+            }
         </section>
     );
 }

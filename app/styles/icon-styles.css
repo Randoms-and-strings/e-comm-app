@@ -71,6 +71,17 @@
 .edit-icon:active{
    color: var(--button-ncta-hover-bg-color);
 }
+.add-item-icon{
+    position: absolute;
+    bottom: -2rem;
+    right: 0rem;
+    cursor: pointer;
+    color: var(--button-ncta-bg-color);
+    border-radius: 50%;
+    /* background-color: var(--button-ncta-bg-color); */
+    
+    font-size: 2rem;
+}
 
 @keyframes rotate-spinner{
     25%{
