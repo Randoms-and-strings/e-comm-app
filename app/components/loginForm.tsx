@@ -8,7 +8,7 @@ type formDisplayProp = {
 export default function Login(props:formDisplayProp){
     return(
         <div style={props.showLogin?{display:"block"}:{display:"none"}} className={signupStyle.loginDiv}>
-                <h1>LOGIN</h1>
+                <h1><span><img src="./box-delivery.svg" /></span> LOGIN</h1>
                 <form action="/home" method="post">
                     <label className={signupStyle.label} htmlFor="username">Username</label>
                     <div className={signupStyle.inputDiv}>

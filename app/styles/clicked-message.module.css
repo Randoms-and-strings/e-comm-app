@@ -56,20 +56,20 @@
 .inputContainer>button{
     width: 20%;
     border: 0;
-    /* background-color: var(--button-ncta-hover-bg-color); */
-    background-color: white;
+    background-color: var(--button-ncta-bg-color);
+    /* background-color: white; */
     
-    color: black;
+    color: var(--background);
     font-weight: 500;
-    border: 2px solid var(--button-ncta-bg-color);
+    /* border: 2px solid var(--button-ncta-bg-color); */
     cursor: pointer;
     /* border-radius: 50%; */
     transition: background-color 0.1s, color 0.1s;
 }
 .inputContainer>button:hover{
     /* color:black; */
-    color: white;
-    background-color: var(--button-ncta-bg-color);
+    color: black;
+    background-color: var(--button-ncta-hover-bg-color);
 }
 .inputContainer>button:active{
     color: white;

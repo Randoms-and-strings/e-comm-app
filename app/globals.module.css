@@ -106,13 +106,14 @@
   align-items: center;
   justify-content: center;
   width: 3.5rem;
-  height: 3.5rem;
+  height: 2rem;
   object-fit: contain;
-  padding: .3rem;
+  padding: .5rem;
   margin-left: calc(50% - 1.5rem);
   font-style: italic;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   background-color:#edeff0;
+  box-shadow: 0.2rem 0.2rem 0.2rem var(--foreground);
  
 }
 .navAnchorTagsClickedCart{
@@ -121,14 +122,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 3.5rem;
-  height: 3.5rem;
+  width: 3rem;
+  height: 3rem;
   object-fit: contain;
   padding: .3rem;
   margin-left: calc(50% - 1.5rem);
   font-style: italic;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   background-color:#edeff0;
+    box-shadow: 0.2rem 0.2rem 0.2rem var(--foreground);
 }
 
 
@@ -202,7 +204,7 @@
    border-radius: 0;
    margin-left: 0;
 }
-.navAnchorTagsClickedCart{
+/* .navAnchorTagsClickedCart{
   color: black;
 
   display: flex;
@@ -216,7 +218,7 @@
   font-style: italic;
   border-radius: 50%;
   background-color:#edeff0;
-}
+} */
   
  .menuNavParent{
     /* display: none; */
@@ -228,6 +230,7 @@
     width: 70%;
     height: 90vh;
     background-color: #16a2b4;
+    padding-right: .2rem;
     z-index: var(--hamburger-allpages-container-zindex);
  }
  .menuNav{

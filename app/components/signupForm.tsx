@@ -11,10 +11,13 @@ export default function SignUpForm(props:formDisplayProp){
     const [isSignupFormV2, showSignupFormV2, hideSignupFormV2] = props.signUpFormStates;
     return(
         <div style={props.showSignUp?{display:"block"}:{display:"none"}}  className={`${!props.showSignUp?signupStyle.scaleDownAnimation:undefined} ${signupStyle.signupDiv}`}>
-                <h1>SIGN-UP</h1>
-                <form method="post" action="/home">
+                <h1><span><img src="./package-box.svg" /></span> SIGN-UP</h1>
+                <form className={signupStyle.form} method="post" action="/home">
+                {/* <img className={signupStyle.label} src="./deliveryman-signup.png"/> */}
                 <div style={isSignupFormV2?{display:"none"}:undefined} >
-                    <label htmlFor="username">Username</label>
+                    <label  htmlFor="username">Username
+                        
+                    </label>
                     <div className={signupStyle.inputDiv}>
                       <input className={signupStyle.input} id="username" type="text" placeholder="Enter your username" />
                         {userIcon}

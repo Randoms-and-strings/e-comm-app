@@ -23,12 +23,12 @@ export default function NavLink(props:navProp) {
         
     return (
         <li className={`${props.id==="cart"?globalstyle.cart:""} ${globalstyle.navListElements}`}>
-            <div className={`${ pathname === props.destination && props.id!== "cart"?globalstyle.navAnchorTagsClicked:""} ${ pathname === props.destination && props.id=== "cart"?globalstyle.navAnchorTagsClickedCart:""} `}>
+            <div className={`${ pathname.includes(props.destination) && props.id!== "cart"?globalstyle.navAnchorTagsClicked:""} ${ pathname.includes(props.destination) && props.id=== "cart"?globalstyle.navAnchorTagsClickedCart:""} `}>
             <Link className={classes} 
             id={props.id}
             href={props.destination}
             onClick={props.hamburgerToggle||(props.id==="cart" && clientWidth<800)?props.hamburgerToggle||toggle:undefined}
-            style={pathname===props.destination?{color:"#0e7d8c"}:undefined}> 
+            style={pathname.includes(props.destination)?{color:"#0e7d8c"}:undefined}> 
             {props.innerText?props.innerText:props.children}
             </Link>
             </div>

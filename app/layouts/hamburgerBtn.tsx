@@ -54,7 +54,8 @@ export default function HamburgerBtn(props:hamburgerProps){
                         id={lowercaseValue} 
                         hamburgerToggle={toggle}
                         classlist={`${globalstyle.navAnchorTags} `} 
-                        destination={lowercaseValue==="home"?"/": `/${lowercaseValue}`} 
+                        // destination={lowercaseValue==="home"?"/": `/${lowercaseValue}`} 
+                        destination={`/${lowercaseValue}`} 
                         innerText={items}
                         /> 
                     );
