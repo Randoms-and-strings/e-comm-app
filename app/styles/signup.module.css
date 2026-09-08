@@ -1,17 +1,19 @@
-/* .svgContainer>img{
-    width: 2rem;
-    height: 2rem;
-} */
+.pageContainer{
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
 
 .iconContainer{
     position: relative;
     border-top: 1px solid black;
-    margin-top: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
     /* height: auto; */
     text-align: center;
 }
 .iconContainer>p{
-    background-color: var(--background);
+    background-color: white;
     position: absolute;
     /* top:  calc(-16px - .5rem); */
     top: calc(0px - 16px - 8px);
@@ -20,6 +22,7 @@
     transform: translateY(-50%);
     transform: translateX(-50%);
     margin: 0;
+    font-size: .8rem;
     /* font-weight: 600; */
 
 }
@@ -31,8 +34,164 @@
     /* position: absolute; */
     /* margin-top: 100%; */
     transform: translateY(50%);
+    width: 2rem;
+    height:2rem;
     /* cursor: pointer; */
 }
 .input{
     display: block;
+    width: calc(100% - 3rem);
+    border-radius: .5rem;
+    padding: 1rem;
+    padding-left: 2rem;
+    border: 1px solid grey;
+    margin-bottom: 1rem; 
+    margin-top: .5rem;
+}
+.inputDiv{
+    position: relative;
+}
+.loginSubmit{
+    margin-top: 2rem;
+    background-color: var(--button-background-color);
+    color: white;
+    transition: background-color 0.2s;
+}
+/*  */
+
+.legendRadio::after{
+    content: "*";
+    color: red;
+}
+
+.buttonDiv{
+    /* width: 100vw; */
+    height: 80vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+.buttonContainer{
+    width: 100%;
+}
+.button{
+    padding: 1.1rem;
+    width: 60%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+    border-radius: 1rem;
+   cursor: pointer;
+}
+.login{
+    background-color: var(--button-ncta-bg-color);
+    color: var(--background);
+    transition: background-color 0.2s, transform 0.2s;
+}
+.login:active{
+    background-color: var(--button-ncta-hover-bg-color);
+    transform: translate(.05rem, .05rem);
+}
+.login:hover,.facebookSignUp:hover,.googleSignUp:hover,.signUp:hover{
+    transform: scale(1.05);
+}
+.googleSignUp{
+    background-color: #DB4437;
+    color: var(--background);
+    transition: background-color 0.2s, transform 0.2s;
+}
+.googleSignUp:active,.loginSubmit:active{
+    background-color: var(--button-hover-bg-color);
+    /* transform: translate(.05rem, .05rem); */
+}
+.facebookSignUp{
+    background-color: #0165E1;
+    color: var(--background);
+    transition: background-color 0.2s, transform 0.2s;
+}
+.facebookSignUp:active{
+    background-color: rgb(21, 21, 168);
+    transform: translate(.05rem, .05rem);
+}
+.signUp{
+    background-color: white;
+    color: black;
+    transition: background-color 0.2s, transform 0.2s;
+}
+.signUp:active{
+    background-color: gray;
+    transform: translate(.05rem, .05rem);
+}
+
+
+.loginDiv, .signupDiv{
+    /* position: absolute; */
+    /* position: absolute;
+    top: 0rem;
+    left: 50%;
+    width: 80%;
+    height: fit-content;
+    
+    background-color: white;
+    padding: 1rem;
+    border-radius: 2rem;
+   
+   transform: translateX(-50%); */
+   background-color: white;
+   padding: 2rem;
+   margin-bottom: 2rem;
+   width: 50%;
+   border-radius: 2rem;
+   margin-left: auto;
+   margin-right: auto;
+   position: relative;
+   animation: scale-up 0.5s ease-out;
+}
+.loginDiv>h1,.signupDiv>h1{
+    text-align: center;
+}
+.showV2Animation{
+    animation: slide-in 0.2s ease-in;
+}
+.scaleDownAnimation{
+    animation: scale-down-animation 0.2s ease-out;
+} 
+@keyframes slide-in {
+    from {
+        transform: translateX(10%);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes scale-up {
+    from {
+        transform: scale(0.2);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes scale-down-animation {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to{
+        transform: scale(0.2);
+        opacity: 0;
+    }
+}
+@media (max-width:800px) {
+    .loginDiv, .signupDiv{
+        width: 80%;
+        padding: 1rem;
+    }
 }

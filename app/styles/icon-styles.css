@@ -42,7 +42,7 @@
 }
 .x-mark{
     font-style: 1.5rem;
-    color: red;
+    color: grey;
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -68,7 +68,7 @@
 .edit-icon:hover, .edit-icon:active{
     transform: scale(1.1);
 }
-.edit-icon:active{
+.edit-icon:active,.x-mark:active{
    color: var(--button-ncta-hover-bg-color);
 }
 .add-item-icon{
@@ -81,6 +81,13 @@
     /* background-color: var(--button-ncta-bg-color); */
     
     font-size: 2rem;
+}
+.user-icon,.padlock, .phone, .address-book{
+    font-size: .9rem;
+    position: absolute;
+    top: 50%;
+    left: .5rem;
+    transform: translateY(-50%);
 }
 
 @keyframes rotate-spinner{
