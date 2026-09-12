@@ -99,10 +99,13 @@
     transform: translateX(-50%); */
     /* margin-right: 0; */
  }
- .placeOrderButton:hover{
+ @media (any-hover: hover){
+   .placeOrderButton:hover{
     background-color: var(--button-hover-bg-color);
     transform: scale(1.05, 1.05);
+ } 
  }
+ 
  /* .placeOrderButton:active{
     
  } */

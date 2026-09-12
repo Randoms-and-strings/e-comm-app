@@ -107,10 +107,13 @@
     text-decoration: none;
     color: black;
 }
-.topOfMessages>div>a:hover{
-    color: var(--button-ncta-bg-color);
+@media (any-hover: hover){
+   .topOfMessages>div>a:hover{
+    color: var(--button-ncta-hover-bg-color);
     
+} 
 }
+
 .topOfMessages>div>a:active{
     color: var(--button-ncta-hover-bg-color);
     

@@ -1,5 +1,5 @@
 import ProductInfo from "@/app/components/productInfoCard";
-import { trashCan } from "@/app/assets/fontAwesome";
+import { trashCan, editPencil } from "@/app/assets/fontAwesome";
 export default function Uploads(){
     return(
         <ProductInfo
@@ -7,6 +7,8 @@ export default function Uploads(){
         allParagraphTextsKey={["name","description", "qty", "cost"]}
         allParagraphTexts={["sung-jinwoo","this product does this this that and that", "5", "$50"]}
         hasEditDeleteIcon={trashCan}
+        hasEditIcon={editPencil}
+        editIconDestination="/edit-products"
         />
     );
 }

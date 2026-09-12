@@ -23,17 +23,21 @@
     left: 0;
     right: 0;
     border-radius: 1rem;
-    box-shadow: .2rem .2rem .2rem var(--button-ncta-bg-color);
+    box-shadow: .2rem .2rem .2rem var(--button-ncta-hover-bg-color);
     opacity: 0;
 }
-.productContainer:hover::before{
+@media (any-hover: hover){
+   .productContainer:hover::before{
     opacity: 1;
-}
+} 
 .productContainer:hover>.textsContainer>div>p{
     /* color: var(--button-ncta-hover-bg-color); */
     
     font-weight: 600;
 }
+}
+
+
 .productContainer:active,.productContainer:active::before{
     animation: click-animation 0.2s;
 }
@@ -68,9 +72,12 @@
 @keyframes click-animation {
     0%{
         transform: translate(0px, 0px);
+        opacity: 1;
     }50%{
         transform: translate(2px, 2px);
+        opacity: 1;
     }100%{
         transform: translate(0px, 0px);
+        opacity: 0;
     }
 }

@@ -71,6 +71,17 @@
 .edit-icon:active,.x-mark:active{
    color: var(--button-ncta-hover-bg-color);
 }
+.edit-pencil{
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    color: var(--button-ncta-bg-color);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.edit-pencil:active{
+    color: var(--button-ncta-hover-bg-color);
+}
 .add-item-icon{
     position: absolute;
     bottom: -2rem;

@@ -4,7 +4,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { 
     faArrowLeft, faBars, faMagnifyingGlass, faCartShopping, faFilter, faChevronDown, faTrashCan,
     faCircleCheck, faXmark, faSquareXmark, faSpinner, faPenToSquare, faCirclePlus, faUser,
-    faLock, faPhone, faAddressBook,
+    faLock, faPhone, faAddressBook, faPencil
         } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "../styles/icon-styles.css";
@@ -28,6 +28,7 @@ let userIcon = <FontAwesomeIcon icon={faUser} className='user-icon' />
 let padlockIcon = <FontAwesomeIcon icon={faLock} className='padlock'/>
 let telephone = <FontAwesomeIcon icon={faPhone} className='phone'/>
 let addressBook = <FontAwesomeIcon icon={faAddressBook} className='address-book'/>
+let editPencil = <FontAwesomeIcon icon={faPencil} className='edit-pencil' />
 export {arrowLeft, hamburger, magnifyingGlass, shoppingCart, filterIcon, dropdownIcon, trashCan, checkicon,
-    xMark, errorXMark, spinner, editIcon, addItemIcon, userIcon, padlockIcon, telephone, addressBook
+    xMark, errorXMark, spinner, editIcon, addItemIcon, userIcon, padlockIcon, telephone, addressBook, editPencil
 };

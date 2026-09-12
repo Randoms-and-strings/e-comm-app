@@ -13,6 +13,7 @@ export default function Messages(){
                     return(
                         <Link className={messageStyles.link} style={{textDecoration:"none"}} key={handleUuid()} href="/messages/a">
                         <div  className={messageStyles.messageContainer}>
+                            
                             <div title="senderName & isTyping" className={messageStyles.senderInfo}>
                                 <h2>User A</h2>
                                 <em><p style={{color:"grey"}}>User A is typing....</p></em>

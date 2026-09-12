@@ -30,7 +30,7 @@ export default function ProfileLayout(props:profilelayoutProps){
     
     return(
         <div>
-            <h1 className={profileLayout.h1}>{props.userName}<span>{props.editIcon}</span></h1>
+            <h1 className={profileLayout.h1}>{props.userName}<span><a>{props.editIcon}</a></span></h1>
             <div className={profileLayout.textsContainer}>
                 {props.descriptionTexts.map((texts, index)=>{
                 return(

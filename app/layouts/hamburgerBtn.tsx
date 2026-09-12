@@ -41,7 +41,7 @@ export default function HamburgerBtn(props:hamburgerProps){
                     {props.fontAwesomeHamburger}
                 </button> 
             </section>
-            {/* // :null} */}
+             {/* :null} */}
 
             {/* <section style={!isClicked && clientWidth<800?{display:"none"}:{display:"inline"}}  */}
             <section style={isToggled===false && clientWidth<800?{display:"none"}:{display:"inline"}} 
@@ -52,10 +52,13 @@ export default function HamburgerBtn(props:hamburgerProps){
                     return(
                       <NavLink key={handleUuid()} 
                         id={lowercaseValue} 
-                        hamburgerToggle={toggle}
+                        // hamburgerToggle={toggle}
                         classlist={`${globalstyle.navAnchorTags} `} 
                         // destination={lowercaseValue==="home"?"/": `/${lowercaseValue}`} 
-                        destination={`/${lowercaseValue}`} 
+                        destination={lowercaseValue=="profile"?
+                                        "/profile/vendor/a/delivered":
+                                        // lowercaseValue === "logout"?""
+                                        `/${lowercaseValue}`} 
                         innerText={items}
                         /> 
                     );

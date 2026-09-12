@@ -7,7 +7,9 @@ type productData = {
     allParagraphTexts: string[],
     allParagraphTextsKey?: string[],
     hasEditDeleteIcon?: JSX.Element,
-    hasTotalValue?: string
+    hasTotalValue?: string,
+    hasEditIcon?: JSX.Element,
+    editIconDestination?:string,
 }
 export default function ProductInfo(props:productData){
    
@@ -34,6 +36,7 @@ export default function ProductInfo(props:productData){
                 </div>
                 {/* <a className={cartStyle.delete}>{props.hasEditDeleteIcon}</a> */}
                 <DeleteFromCartBtn>{props.hasEditDeleteIcon}</DeleteFromCartBtn>
+                {props.hasEditIcon?<a href={props.editIconDestination}>{props.hasEditIcon}</a>:undefined}
                 {props.hasTotalValue?<p className={cartStyle.qtyXSum}><b>={props.hasTotalValue}</b></p>:undefined}
                 
         </div>

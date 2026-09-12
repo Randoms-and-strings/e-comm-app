@@ -9,7 +9,7 @@ type SearchBarProps = {
 export default function SearchBar(props:SearchBarProps){
     return(
         <li className={`${globalstyle.searchBarContainer} ${globalstyle.navListElements}`}>
-            <form action="/search" method="get" >
+            <form action="/search/products" method="get" >
             <div className={globalstyle.searchButtonParentDiv}>
             <input type="text" placeholder="Search" name="searchProducts" className={globalstyle.searchButtonInput}/>
             

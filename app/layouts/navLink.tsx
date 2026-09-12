@@ -11,12 +11,12 @@ type navProp = {
     classlist: string,
     destination:string,
     children?:JSX.Element[],
-    hamburgerToggle?:()=>void,
+    // hamburgerToggle?:()=>void,
 }
 
 export default function NavLink(props:navProp) {
     const pathname = usePathname();
-    const {toggle} = useHamburgerToggle();
+    const {toggle, isToggled} = useHamburgerToggle();
     const clientWidth = useClientWidth();
     let classes:string = props.classlist;
     // console.log(pathname);
@@ -27,7 +27,8 @@ export default function NavLink(props:navProp) {
             <Link className={classes} 
             id={props.id}
             href={props.destination}
-            onClick={props.hamburgerToggle||(props.id==="cart" && clientWidth<800)?props.hamburgerToggle||toggle:undefined}
+            // onClick={props.hamburgerToggle||(props.id==="cart" && clientWidth<800)?props.hamburgerToggle||toggle:undefined}
+            onClick={clientWidth<800 && isToggled?toggle:undefined}
             style={pathname.includes(props.destination)?{color:"#0e7d8c"}:undefined}> 
             {props.innerText?props.innerText:props.children}
             </Link>

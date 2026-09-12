@@ -24,6 +24,7 @@ export default function HomeCard(props:homeCardProp){
     }
     return(
         <div key={props.key} className={homestyles.card}>
+            <p style={isImageHovered?{opacity:"1"}:{opacity:"0"}}></p>
             <div className={homestyles.cardImg}>
   
               <img   
@@ -44,6 +45,15 @@ export default function HomeCard(props:homeCardProp){
                 <AddToCartBtn innerText="Add To Cart"/>
               
             </div>
+            
+            {/* <style jsx global>
+                {`
+                    .card{
+                        width: ${isImageHovered?"3rem":"5rem"};
+                    }
+                
+                `}
+            </style> */}
 
             
         </div>

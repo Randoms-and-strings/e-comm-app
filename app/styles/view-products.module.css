@@ -100,7 +100,7 @@
     font-size: 1rem;
     cursor: pointer;
 }
-@media (min-width:356px) and (max-width:800px) {
+@media (min-width:354px) and (max-width:800px) {
     .productContainer{
         flex-direction: column;
     }
